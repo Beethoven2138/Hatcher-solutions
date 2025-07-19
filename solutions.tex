@@ -38,4 +38,11 @@ Construct an explicit deformation retraction of the torus with one point deleted
 We can model the torus as the disk $D^2:=\{(x,y)\in\mathbb{R}^2:x^2+y^2\leq 1\}$ where we split the boundary into $4$ equal arcs and identify opposite arcs under the quotient map $q:D^2\to T$. Let $A:=q(\partial D^2)$ be the subspace we wish to retract $T$ onto. Without loss of generality, suppose that we remove the point $(0,0)$. Given a point $x$, we want to send it to $\frac{x}{\|x\|}$ along the line segment from $x$ to $\frac{x}{\|x\|}$. We thus define the homotopy \[F:T\times I\to T:(q(x),t)\mapsto q\left(x(1-t)+\frac{x}{\|x\|}t\right).\] This homotopes between the identity map and a retraction of $T$ onto $A$ while fixing all points of $A$ throughout, and hence is a deformation retraction.
 \end{proof}
 
+\begin{exercise}
+Construct an explicit deformation retraction of $\mathbb{R}^n\setminus\{0\}$ onto $S^{n-1}$.
+\end{exercise}
+\begin{proof}
+We define a homotopy \[F:\mathbb{R}^n\setminus\{0\}\times I\to S^{n-1}:(x,t)\mapsto x(1-t)+\frac{x}{\|x\|}t.\] This homotopes between the identity map on $\mathbb{R}^n\setminus\{0\}$ and a retraction of $\mathbb{R}^n\setminus\{0\}$ onto $S^{n-1}$, and hence is a deformation retraction.
+\end{proof}
+
 \end{document}
