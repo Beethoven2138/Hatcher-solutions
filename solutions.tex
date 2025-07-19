@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage[english]{babel}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{cite}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+\title{Hatcher solutions}
+\author{Saxon Supple}
+\date{July 2025}
+
+\begin{document}
+
+\maketitle
+\begin{exercise}
+Construct an explicit deformation retraction of the torus with one point deleted onto a graph consisting of two circles intersecting in a point, namely, longitude and meridian circles of the torus.
+\end{exercise}
+\begin{proof}
+We can model the torus as the disk $D^2:=\{(x,y)\in\mathbb{R}^2:x^2+y^2\leq 1\}$ where we split the boundary into $4$ equal arcs and identify opposite arcs under the quotient map $q:D^2\to T$. Let $A:=q(\partial D^2)$ be the subspace we wish to retract $T$ onto. Without loss of generality, suppose that we remove the point $(0,0)$. Given a point $x$, we want to send it to $\frac{x}{\|x\|}$ along the line segment from $x$ to $\frac{x}{\|x\|}$. We thus define the homotopy \[F:T\times I\to T:(q(x),t)\mapsto q\left(x(1-t)+\frac{x}{\|x\|}t\right).\] This homotopes between the identity map and a retraction of $T$ onto $A$ while fixing all points of $A$ throughout, and hence is a deformation retraction.
+\end{proof}
+
+\end{document}
