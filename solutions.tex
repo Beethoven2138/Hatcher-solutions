@@ -12,6 +12,8 @@
 \usepackage{mathtools}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{cite}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 
 \newtheorem{theorem}{Theorem}[section]
@@ -74,6 +76,20 @@ Show that if a space $X$ deformation retracts to a point $x\in X$, then for each
 \end{exercise}
 \begin{proof}
 Without loss of generality, let $U$ be an open neighbourhood of $x$. Define \[F:X\times I\to X:(y,t)\mapsto f_t(y)\] and let $A:=F^{-1}(U)$. $A$ is an open set containing the slice $\{x\}\times I$, so by the Tube Lemma there exists a tube $V\times I\subset X\times I$, where $V$ is open and contains $x$. Furthermore, $V\times I\subset A$, so $V$ consists only of points in $U$ (since $V\times\{0\}\subset U\times\{0\}$) which stay in $U$ throughout the homotopy $f_t$. Let $\iota:V\hookrightarrow U$ be the inclusion map $V\hookrightarrow U$. Then $f_t:X\to X$ restricts to a homotopy ${f_t}_{|V}:V\to U$ and hence $\iota\simeq {f_1}_{|V}$, where ${f_1}_{|V}$ is the constant map, so $\iota$ is nullhomotopic.
+\end{proof}
+
+\begin{exercise}
+\begin{enumerate}
+\item[(a)] Let $X$ be the subspace of $\mathbb{R}^2$ consisting of the horizontal segment $[0,1]\times\{0\}$ together with all the vertical segments $\{r\}\times[0,1-r]$ for $r$ a rational number in $[0,1]$. Show that $X$ deformation retracts to any point in the segment $[0,1]\times\{0\}$, but not to any other point.
+\item[(b)] Let $Y$ be the subspace of $\mathbb{R}^2$ that is the union of an infinite number of copies of $X$ arranged as in the figure below. Show that $Y$ is contractible but does not deformation retract onto any point.
+\includegraphics[scale=0.5]{Screenshot 2025-07-20 at 19-46-35 AT.dvi - AT.pdf.png}
+\item[(c)] Let $Z$ be the zigzag subspace of $Y$ homeomorphic to $\mathbb{R}$ indicated by the heavier line. Show there is a deformation retraction in the weak sense of $Y$ onto $Z$, but no true deformation retraction.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}
+\item[(a)] We define a homotopy \[f_t:X\to X:(a,b) \mapsto (a,b(1-t)).\] $f_t$ fixes $[0,1]\times\{0\}$, $f_0=\text{id}_X$ and $f_1$ is a retraction from $X$ to $[0,1]\times\{0\}$, so $f_t$ is a deformation retraction. Hence $[0,1]\times\{0\}$ is a deformation retract of $X$. Any point in $[0,1]\times\{0\}$ is then clearly a deformation retract of $[0,1]\times\{0\}$, so  $X$ deformation retracts to any point in $[0,1]\times\{0\}$ by transitivity. Now suppose $X$ deformation retracts to some other point $x\in X$. We can then find a neighbourhood $U$ of $x$ which does not contain $[0,1]\times\{0\}$. However, $U$ is not path-connected, so there does not exist a neighbourhood $V\subset U$ of $x$ such that the inclusion map $V\hookrightarrow U$ is nullhomotopic; a contradiction.
+\end{enumerate}
 \end{proof}
 
 \end{document}
