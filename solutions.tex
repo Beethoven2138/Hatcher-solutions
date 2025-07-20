@@ -45,4 +45,21 @@ Construct an explicit deformation retraction of $\mathbb{R}^n\setminus\{0\}$ ont
 We define a homotopy \[F:\mathbb{R}^n\setminus\{0\}\times I\to S^{n-1}:(x,t)\mapsto x(1-t)+\frac{x}{\|x\|}t.\] This homotopes between the identity map on $\mathbb{R}^n\setminus\{0\}$ and a retraction of $\mathbb{R}^n\setminus\{0\}$ onto $S^{n-1}$, and hence is a deformation retraction.
 \end{proof}
 
+\begin{exercise}
+\begin{enumerate}
+\item[(a)] Show that the composition of homotopy equivalences $X\to Y$ and $Y\to Z$ is a homotopy equivalence $X\to Z$. Deduce that homotopy equivalence is an equivalence relation.
+\item[(b)] Show that the relation of homotopy among maps $X\to Y$ is an equivalence relation.
+\item[(c)] Show that a map homotopic to a homotopy equivalence is a homotopy equivalence.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}
+\item[(a)] Let $\phi:X\to Y$ and $\psi: Y\to Z$ be homotopy equivalences. There then exist homotopy inverses $\phi_1:Y\to X$ and $\psi_1: Z\to Y$ of $\phi$ and $\psi$ respectively.\[(\phi_1\circ\psi_1)\circ(\psi\circ\phi)= \phi_1\circ(\psi_1\circ\psi)\circ\phi\simeq\phi_1\circ\phi\simeq\text{id}_X\] and\[(\psi\circ\phi)\circ(\phi_1\circ\psi_1)=\psi\circ(\phi\circ\phi_1)\circ\psi_1\simeq\psi\circ\psi_1\simeq\text{id}_Z\]so $\psi\circ\phi$ is a homotopy equivalence.
+\item[(b)] Let $\phi,\psi,\rho$ be continuous maps from $X$ to $Y$. Clearly $\phi\simeq\phi$. Furthermore, if $F:X\times I\to Y$ is a homotopy from $\phi$ to $\psi$, then $G:X\times I\to Y:(x,t)\mapsto F(x,1-t)$ is a homotopy from $\psi$ to $\phi$. Finally, let $A:X\times I\to Y$ be a homotopy from $\phi$ to $\psi$ and let $B:X\times I\to Y$ be a homotopy from $\psi$ to $\rho$. We define a map $C:X\times I\to Y$ by \[C(x,t)=\begin{cases}
+    A(x,2t)\text{ if }0\leq t\leq \frac{1}{2}\\B(x,2t-1)\text{ if }\frac{1}{2}<t\leq 1.
+\end{cases}\]$X\times[0,\frac{1}{2}]$ and $X\times[\frac{1}{2},1]$ are both closed subsets of $X\times I$ with $X\times[0,\frac{1}{2}]\cup X\times[\frac{1}{2},1]=X\times I$. Furthermore, $C_{|{X\times[0,\frac{1}{2}]}}$ and $C_{|{X\times[\frac{1}{2},1]}}$ are both continuous with respect to the induced topologies on $X\times[0,\frac{1}{2}]$ and $X\times[\frac{1}{2},1]$ respectively. Hence, $C$ is continuous on $X\times I$ and is thus a homotopy from $\phi$ to $\rho$.
+\item[(c)] Let $\phi:X\to Y$ be a homotopy equivalence with homotopy inverse $\psi:Y\to X$. Let $\phi_1:X\to Y$ be homotopic to $\phi$. Then \[\phi_1\circ\psi\simeq\phi\circ\psi\simeq\text{id}_Y\] and \[\psi\circ\phi_1\simeq\psi\circ\phi\simeq\text{id}_X.\] Hence $\phi_1$ is a homotopy equivalence.
+\end{enumerate}
+\end{proof}
+
 \end{document}
