@@ -69,4 +69,11 @@ A $\textbf{deformation retraction in the weak sense}$ of a space $X$ to a subspa
 Let $\iota:A\to X$ denote the inclusion $A\hookrightarrow X$. Define $\phi:X\to A:x\mapsto f_1(x)$, which is well-defined since $f_1(X)\subset A$. Then \[\phi\circ\iota={f_1}_{|A}\simeq {f_0}_{|A}=\text{id}_A.\]This is a valid homotopy of maps $A\to A$ since $f_1(A)\subset A\forall t$. Furthermore,\[\iota\circ\phi=f_1\simeq\text{id}_X.\] Hence $\iota$ is a homotopy equivalence with homotopy inverse $\phi$.
 \end{proof}
 
+\begin{exercise}
+Show that if a space $X$ deformation retracts to a point $x\in X$, then for each neighbourhood $U$ of $x$ in $X$ there exists a neighbourhood $V\subset U$ of $x$ such that the inclusion map $V\hookrightarrow U$ is nullhomotopic.
+\end{exercise}
+\begin{proof}
+Without loss of generality, let $U$ be an open neighbourhood of $x$. Define \[F:X\times I\to X:(y,t)\mapsto f_t(y)\] and let $A:=F^{-1}(U)$. $A$ is an open set containing the slice $\{x\}\times I$, so by the Tube Lemma there exists a tube $V\times I\subset X\times I$, where $V$ is open and contains $x$. Furthermore, $V\times I\subset A$, so $V$ consists only of points in $U$ (since $V\times\{0\}\subset U\times\{0\}$) which stay in $U$ throughout the homotopy $f_t$. Let $\iota:V\hookrightarrow U$ be the inclusion map $V\hookrightarrow U$. Then $f_t:X\to X$ restricts to a homotopy ${f_t}_{|V}:V\to U$ and hence $\iota\simeq {f_1}_{|V}$, where ${f_1}_{|V}$ is the constant map, so $\iota$ is nullhomotopic.
+\end{proof}
+
 \end{document}
