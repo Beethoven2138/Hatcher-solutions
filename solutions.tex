@@ -123,4 +123,18 @@ Show that a retract of a contractible space is contractible.
 Let $X$ be a contractible space with $A$ a retract of $X$. Let $f_t:X\to X$ be a homotopy from $\text{id}_X$ to a constant map, and let $r:X\to A$ be a retraction of $X$ onto $A$. $r\circ {f_0}_{|A}=\text{id}_A$ and $r\circ {f_1}_{|A}$ is constant due to ${f_1}_{|A}$ being constant. Hence $\text{id}_A$ is homotopic to a constant map so $A$ is contractible.
 \end{proof}
 
+\begin{exercise}
+Show that a space $X$ is contractible iff every map $f:X\to Y$, for arbitrary $Y$, is
+nullhomotopic. Similarly, show $X$ is contractible iff every map $f:Y\to X$ is nullhomotopic.
+\end{exercise}
+\begin{proof}
+$(\impliedby)$: Let $Y=X$ and $f=\text{id}_X$. Then $\text{id}_X$ is nullhomotopic so $X$ is contractible.
+
+$(\implies)$: Let $g_t:X\to X$ be a homotopy from $\text{id}_X$ to a constant map. Then define a homotopy $h_t:X\to Y$ by $h_t(x)=f\circ g_t(x)$. This is a homotopy between $f$ and a constant map, so $f$ is nullhomotopic.
+
+$(\impliedby)$: Again, let $Y=X$ and $f=\text{id}_X$.
+
+$(\implies)$: $g_t\circ f$ is a homotopy from $f$ to a constant map so $f$ is nullhomotopic.
+\end{proof}
+
 \end{document}
