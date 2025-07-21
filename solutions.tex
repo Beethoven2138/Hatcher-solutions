@@ -105,7 +105,22 @@ Fill in the details in the following construction from
 same properties as the space $Y$ in Exercise $6$, that is, $Y$
 is contractible but does not deformation retract to any
 point. To begin, let $X$ be the union of an infinite sequence of cones on the Cantor set arranged end-to-end,
-as in the figure. Next, form the one-point compactification of $X\times\mathbb{R}$. This embeds in $\mathbb{R}^3$ as a closed disk with curved ‘fins’ attached along
+as in the figure. Next, form the one-point compactification of $X\times\mathbb{R}$. This embeds in $\mathbb{R}^3$ as a closed disk with curved ‘fins’ attached along circular arcs, and with the one-point compactification of $X$ as a cross-sectional slice.
+The desired space $Y$ is then obtained from this subspace of $\mathbb{R}^3$ by wrapping one more
+cone on the Cantor set around the boundary of the disk.
+
+\includegraphics[scale=0.5]{Screenshot 2025-07-21 at 17-47-12 AT.dvi - AT.pdf.png}
 \end{exercise}
+
+\begin{exercise}
+For $n>2$, construct an $n$-room analog of the house with two rooms.
+\end{exercise}
+
+\begin{exercise}
+Show that a retract of a contractible space is contractible.
+\end{exercise}
+\begin{proof}
+Let $X$ be a contractible space with $A$ a retract of $X$. Let $f_t:X\to X$ be a homotopy from $\text{id}_X$ to a constant map, and let $r:X\to A$ be a retraction of $X$ onto $A$. $r\circ {f_0}_{|A}=\text{id}_A$ and $r\circ {f_1}_{|A}$ is constant due to ${f_1}_{|A}$ being constant. Hence $\text{id}_A$ is homotopic to a constant map so $A$ is contractible.
+\end{proof}
 
 \end{document}
