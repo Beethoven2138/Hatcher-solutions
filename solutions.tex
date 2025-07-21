@@ -89,11 +89,23 @@ Without loss of generality, let $U$ be an open neighbourhood of $x$. Define \[F:
 \begin{proof}
 \begin{enumerate}
 \item[(a)] We define a homotopy \[f_t:X\to X:(a,b) \mapsto (a,b(1-t)).\] $f_t$ fixes $[0,1]\times\{0\}$, $f_0=\text{id}_X$ and $f_1$ is a retraction from $X$ to $[0,1]\times\{0\}$, so $f_t$ is a deformation retraction. Hence $[0,1]\times\{0\}$ is a deformation retract of $X$. Any point in $[0,1]\times\{0\}$ is then clearly a deformation retract of $[0,1]\times\{0\}$, so  $X$ deformation retracts to any point in $[0,1]\times\{0\}$ by transitivity. Now suppose $X$ deformation retracts to some other point $x\in X$. We can then find a neighbourhood $U$ of $x$ of the form $B_\epsilon(x)\cap X$ for some $\epsilon > 0$, which does not contain $[0,1]\times\{0\}$. However, $U$ is not path-connected, so there does not exist a neighbourhood $V\subset U$ of $x$ such that the inclusion map $V\hookrightarrow U$ is nullhomotopic; a contradiction.
-\item[(b)] Let $f_t:Y\to Y$ be a homotopy where the restriction of $f_t$ to a copy of $X$ is a deformation retraction onto the point in the middle of the horizontal segment. Then let $g_t:f_1(Y)\to Y$ be a homotopy from $\text{id}_{f_1(Y)}$ to a map which sends every element of $f_1(Y)$ to the same point. This then gives a homotopy $h_t:Y\to Y$ given by\[h_t(y)=\begin{cases}
-    f_{2t}(y)\text{ if }0\leq t\leq\frac{1}{2},\\g_{2t-1}\circ f_1(y)\text{ if }\frac{1}{2}<t\leq 1.
-\end{cases}\]Hence $Y$ is contractible, as we have found a homotopy from the identity map to a constant map. How suppose $Y$ deformation retracts onto a point $y$. We can then find a sufficiently small open neighbourhood $U$ of $y$ such that for every neighbourhood $V\subset U$ of $y$, $U$ is not path-connected, and hence the inclusion map $V\hookrightarrow U$ is not nullhomotopic; a contradiction. Hence $Y$ does not deformation retract onto a point $y$.
-\item[(c)] Since $Z$ deformation retracts onto a point, if there were a deformation retract of $Y$ onto $Z$, then there would be a deformation retract of $Y$ onto a point. However, (b) showed that this is not the case, and hence $Y$ does not deformation retract onto $Z$. However, there is a weak deformation retract of $Y$ onto $Z$ given by shrinking the line segments leading out of $Z$ onto $Z$.
+\item[(b)] Define a homotopy $f_t:Y\to Y$ where $f_t(y)$ sends $y$ a distance of $t$ to the right along $Y$. Then $f_0=\text{id}_Y$ and $f_1(Y)=Z$, where $Z$ is the zigzag subspace of $Y$. $Z$ is contractible, being homeomorphic to $\mathbb{R}$, and hence there exists a homotopy $h_t:Z\to Z$ from $\text{id}_Z$ to a constant function. We can then define a homotopy $F_t:Y\to Y$ of $\text{id}_Y$ to a constant map by\[F_t(y)=\begin{cases}
+    f_{2t}(y)\text{ if }0\leq t\leq\frac{1}{2},
+    \\h_{2t-1}\circ f_1(y)\text{ if }\frac{1}{2}< t\leq 1.
+\end{cases}\]
+
+Now suppose $Y$ deformation retracts onto a point $y$. We can then find a sufficiently small open neighbourhood $U$ of $y$ such that for every neighbourhood $V\subset U$ of $y$, $U$ is not path-connected, and hence the inclusion map $V\hookrightarrow U$ is not nullhomotopic; a contradiction. Hence $Y$ does not deformation retract onto a point $y$.
+\item[(c)] Since $Z$ deformation retracts onto a point, if there were a deformation retract of $Y$ onto $Z$, then there would be a deformation retract of $Y$ onto a point. However, (b) showed that this is not the case, and hence $Y$ does not deformation retract onto $Z$. However, the homotopy $f_t$ defined in (b) is a weak deformation retract of $Y$ onto $Z$.
 \end{enumerate}
 \end{proof}
+
+\begin{exercise}
+Fill in the details in the following construction from
+[Edwards 1999] of a compact space $Y\subset\mathbb{R}^3$ with the
+same properties as the space $Y$ in Exercise $6$, that is, $Y$
+is contractible but does not deformation retract to any
+point. To begin, let $X$ be the union of an infinite sequence of cones on the Cantor set arranged end-to-end,
+as in the figure. Next, form the one-point compactification of $X\times\mathbb{R}$. This embeds in $\mathbb{R}^3$ as a closed disk with curved ‘fins’ attached along
+\end{exercise}
 
 \end{document}
