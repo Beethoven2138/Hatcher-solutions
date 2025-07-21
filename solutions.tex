@@ -141,8 +141,6 @@ $(\implies)$: $g_t\circ f$ is a homotopy from $f$ to a constant map so $f$ is nu
 Show that $f:X\to Y$ is a homotopy equivalence if there exist maps $g,h:Y\to X$ such that $fg\simeq\mathbb{1}$ and $hf\simeq\mathbb{1}$. More generally, show that $f$ is a homotopy equivalence if $fg$ and $hf$ are homotopy equivalences.
 \end{exercise}
 \begin{proof}
-$fgfh,gfhf$
-$fhfg,hfgf$
 Let $\phi=h\circ f\circ g:Y\to X$. Then\[f\circ\phi=f\circ(h\circ f\circ g)=f\circ(h\circ f)\circ g\simeq f\circ g\simeq\mathbb{1}\] and\[\phi\circ f=(h\circ f\circ g)\circ f=h\circ(f\circ g)\circ f\simeq h\circ f\simeq\mathbb{1}\] so $\phi$ is a homotopy inverse of $f$ so $f$ is a homotopy equivalence.
 
 Let $g_1$ and $h_1$ be the homotopy inverses of $fg$ and $hf$ respectively. We then have that $f(gg_1)\simeq\mathbb{1}$ and $(h_1h)f\simeq\mathbb{1}$, and hence $f$ is a homotopy equivalence with homotopy inverse $h_1hfgg_1$.
