@@ -153,12 +153,12 @@ of path-components. Deduce that if the components of a space $X$ coincide with i
 path-components, then the same holds for any space $Y$ homotopy equivalent to $X$.
 \end{exercise}
 \begin{proof}
-Let $\sim_X$ be the equivalence relation on $X$ given by $a\sim_X b$ if and only if $a$ and $b$ are in the same path-component. Similarly define the relation $\sim_Y$ on $Y$. Let $g:Y\to X$ be a homotopy inverse of $f$. We let $\phi_t$ and $\psi_t$ be homotopies from $f\circ g$ to $\text{id}_Y$ and from $g\circ f$ to $\text{id}_X$ respectively.
+Let $\sim_X$ be the equivalence relation on $X$ given by $a\sim_X b$ if and only if $a$ and $b$ are in the same path-component. Similarly define the relation $\sim_Y$ on $Y$. Let $g:Y\to X$ be a homotopy inverse of $f$. We let $\phi_t$ and $\psi_t$ be homotopies from $\text{id}_Y$ to $f\circ g$ and from $\text{id}_X$ to $g\circ f$ respectively.
 
 
 \textbf{We first show that $f$ induces a well-defined map on path components.}\\Let $x_0\sim_X x_1$. Let $\phi:I\to X$ be a path from $x_0$ to $x_1$. Then $f\circ\phi:I\to Y$ is a path from $f(x_0)$ to $f(x_1)$ so $f(x_0)\sim_Y f(x_1)$.
 
-\textbf{We now show that $f$ induces a surjective map on path components.}\\Let $y\in Y$. Then $y=\phi_1(y)\sim_Y \phi_0(y)=f(g(y))$, and hence $y$ is in the same path component as a point in the image of $f$.
+\textbf{We now show that $f$ induces a surjective map on path components.}\\Let $y\in Y$. Then $y=\phi_0(y)\sim_Y \phi_1(y)=f(g(y))$, and hence $y$ is in the same path component as a point in the image of $f$.
 
 \textbf{We finally show that $f$ induces an injective map on path components.}\\ Suppose that $f(x_0)\sim_Yf(x_1)$. Then $g\circ f(x_0)\sim_X g\circ f(x_1)$ and hence $\psi_1(x_0)\sim_X\psi_1(x_1)$. We also have that $x_0=\psi_0(x_0)\sim_X\psi_1(x_0)$ and $x_1=\psi_0(x_1)\sim_X\psi_1(x_1)$, and so by transitivity\[x_0\sim_X\psi_1(x_0)\sim_X\psi_1(x_1)\sim_X x_1\implies x_0\sim_X x_1.\]Hence $f$ induces a bijection on path-components.\newline
 
@@ -170,7 +170,7 @@ Now let $\sim_X$ and $\sim_Y$ be the corresponding relations for connected compo
 Let $x_0\sim_X x_1$. Let $Z$ be a connected subspace containing $x_0$ and $x_1$. The image of a connected space is connected, and hence $f(x_0)\sim_Y f(x_1)$, as both are contained in $f(Z)$.
 
 \textbf{We next show that $f$ induces a surjective map on connected components.}
-Let $y\in Y$. Let $[y]_Y$ be the connected component of $y$. As show earlier, $y$ is in the same path component as $g(y)$, and hence is in the same connected component as $g(y)$. Hence, $[y]_Y$ is in the image of the map on connected components induced by $f$.
+Let $y\in Y$. Let $[y]_Y$ be the connected component of $y$. As show earlier, $y$ is in the same path component as $f\circ g(y)$, and hence is in the same connected component as $f\circ g(y)$. Hence, $[y]_Y$ is in the image of the map on connected components induced by $f$.
 
 \textbf{We finally show that $f$ induces an injective map on connected components.}
 Let $f(x_0)\sim_Yf(x_1)$. Then $g\circ f(x_0)\sim_X g\circ f(x_1)$. We then have that $x_0$ is in the same path-component as $g\circ f(x_0)$ and $x_1$ is in the same path-component as $g\circ f(x_1)$, and hence that $x_0$ is in the same connected component as $g\circ f(x_0)$ and $x_1$ is in the same connected component as $g\circ f(x_1)$. Hence by transitivity\[x_0\sim_X g\circ f(x_0)\sim_Xg\circ f(x_1)\sim_X x_1\implies x_0\sim_X x_1.\] Hence $f$ induces a bijection on connected components.
