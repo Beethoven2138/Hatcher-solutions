@@ -180,4 +180,23 @@ Let $[x]_X$ be the connected component of some point $x\in X$ and let $[f(x)]_Y$
 Finally, suppose that the connected components of a space $X$ coincide with its path-components, and let $Y$ be homotopy equivalent to $X$. Let $f:X\to Y$ be a homotopy equivalence. Let \[f_\#:\{\text{Path/connected components of } X\}\to\{\text{Path components of } Y\}\] and \[f_*:\{\text{Path/connected components of } X\}\to\{\text{Connected components of } Y\}\] be the maps induced by $f$. We then have a bijection between path-components of $Y$ and connected components of $Y$ given by $f_*\circ f_\#^{-1}$. Furthermore, given any path-component $A\subseteq Y$, $f_*\circ f_\#^{-1}(A)$ is the connected component containing $A$. Hence there must be at most one path-component per connected component, since otherwise multiple path-components would be mapped to the same connected component by $f_*\circ f_\#^{-1}$, and it would cease to be injective. Hence the connected components of $Y$ coincide with its path-components.
 \end{proof}
 
+\begin{exercise}
+Show that any two deformation retractions $r_t^0$ and $r_t^1$ of a space $X$ onto a subspace $A$ can be joined by a continuous family of deformation retractions $r_t^s$, $0\leq s\leq 1$, of $X$ onto $A$, where continuity means that the map $X\times I\times I\to X$ sending $(x,s,t)$ to $r_t^s(x)$ is continuous.
+\end{exercise}
+\begin{proof}
+We know what $r_t^s$ is on $X\times\{0,1\}\times I\cup A\times I\times I\cup X\times I\times\{0\}$.
+
+\noindent Define $r_t^s$ by\[r_t^s(x)=\begin{cases}
+    r_t^0\circ r_{2ts}^1(x)\text{ if } 0\leq s <\frac{1}{2},\\r_{2t(1-s)}^0\circ r_t^1(x)\text{ if }\frac{1}{2}\leq s\leq 1.
+\end{cases}\] If $s=0$, then $r_t^0=r_t^0\circ r_0^1=r_t^0$.
+
+\noindent If $s=1$, then $r_t^1=r_0^0\circ r_t^1=r_t^1$.
+
+\noindent If $a\in A$, then $r_t^s(a)=a\forall s,t$.
+
+\noindent If $t=0$, then $r_0^s=\text{id}_X\forall s$.
+
+\noindent If $t=1$, then $r_1^0(x)\in A\forall x$ and $r_1^1(x)\in A\forall x$, and hence $r_1^s(x)\in A\forall x$.
+\end{proof}
+
 \end{document}
