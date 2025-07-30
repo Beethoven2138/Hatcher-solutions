@@ -199,4 +199,27 @@ We know what $r_t^s$ is on $X\times\{0,1\}\times I\cup A\times I\times I\cup X\t
 \noindent If $t=1$, then $r_1^0(x)\in A\forall x$ and $r_1^1(x)\in A\forall x$, and hence $r_1^s(x)\in A\forall x$.
 \end{proof}
 
+\begin{exercise}
+Given positive integers $v$, $e$ and $f$ satisfying $v-e+f=2$, construct a cell structure on $S^2$ having $v$ $0$-cells, $e$ $1$-cells, and $f$ $2$-cells.
+\end{exercise}
+\begin{proof}
+For $(v,e,f)=(2+m,m+n+1,n+1)$ with $m>0,n>1$, we can use the following construction: Begin with $0$-cells $e_1^0,...,e_{2+m}^0$. Then attach $n-2$ loops $e_1^1,...,e_{n-2}^1$ to $e_1^0$, and add two $1$-cells $e_{n-1}^1$ and $e_n^1$, each with one endpoint attached to $e_1^0$ and the other endpoint attached to $e_{2+m}^0$. Then add $1$-cells $e_{n+1}^1,...,e_{n+1+m}^1$, where $e_{n+i}^1$ is attached to $e_i^0$ and $e_{i+1}^0$. Then add $2$-cells $e_1^2,...,e_{n+1}^2$, where the first $n-2$ are attached to the $n-2$ loops, the next two are attached to $e_1^0\cup...\cup e_{2+m}^0\cup e_{n-1}^1\cup e_{n+1}^1\cup...e_{n+1+m}^1$ and $e_1^0\cup...\cup e_{2+m}^0\cup e_n^1\cup e_{n+1}^1\cup...e_{n+1+m}^1$ respectively. Finally, attach the last $2$-cell to $e_1^0\cup e_2^0\cup e_1^1\cup...\cup e_n^1$.
+
+\includegraphics[scale=0.5]{Screenshot (1340).png}
+
+If $v=2$, then $e=f$. First suppose $e>1$. We can then form $S^2$ by starting with $e_1^0$ and $e_2^0$, and then attaching $e-2$ loops to $e_1^0$ and two $1$-cells each connecting the two $0$-cells, and finally attaching $e$ $2$-cells.
+
+\includegraphics[scale=0.5]{Screenshot (1341).png}
+
+The case $(v,e,f)=(2,1,1)$ is then just the standard construction of starting with two points, attaching two lines joining them to form a circle, filling in the centre of the circle, and then identifying the two lines.
+
+Now consider the case $(v,e,f)=(2+m,m+2,2)$. That is, the case where $n=1$. The following diagram works:
+
+\includegraphics[scale=0.5]{Screenshot (1342).png}
+
+For the case $(v,e,f)=(2+m,m+1,1)$, which corresponds to $n=0$, the following diagram works:
+
+\includegraphics[scale=0.5]{Screenshot (1343).png}
+\end{proof}
+
 \end{document}
