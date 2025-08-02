@@ -237,5 +237,26 @@ $X^n=S^n$ is a subcomplex of $S^\infty$ for every $n$. Also, for each $X^n=S^n$,
 \begin{exercise}
 Show that $S^\infty$ is contractible.
 \end{exercise}
+\begin{proof}
+
+\end{proof}
+
+\begin{exercise}
+\begin{enumerate}
+\item[(a)] Show that the mapping cylinder of every map $f:S^1\to S^1$ is a CW complex.
+\item[(b)] Construct a 2-dimensional CW complex that contains both an annulus $S^1\times I$ and a Mobius band as deformation retracts.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+Observe the following diagram:
+
+
+\includegraphics[scale=0.5]{Screenshot (1346).png}
+
+We begin with a $1$-skeleton consisting of $e_1^0,e_2^0,e_1^1,e_2^1,e_3^1$. We then introduce a $2$-cell $e_1^2$. Let $\phi:S^1\to X^1$ be the attaching map of $e_1^2$. We define $\phi$ as follows: Identify the arc from $1$ to $2$ with $e_1^0\cup e_1^1$. Then identify the arc from $2$ to $3$ with $e_1^0\cup e_2^1\cup e_2^0$. Then identify the arc from $1$ to $4$ with $e_1^0\cup e_2^1\cup e_2^0$. Finally, let $A$ be the arc from $3$ to $4$. We then have homeomorphisms $g:A/3\sim 4\to S^1$ and $h:S^1\to e_3^1\cup e_2^0$ such that $h\circ f\circ g(3)=e_2^0$, and hence we can attach $A$ to $e_3^1$ under the identification $x\sim h\circ f\circ g(x)\forall x\in A$. This then gives a cell complex that is homeomorphic to $M_f$.
+\end{enumerate}
+\end{proof}
 
 \end{document}
