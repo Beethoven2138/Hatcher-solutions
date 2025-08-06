@@ -275,4 +275,20 @@ For the general case:
 \noindent Recall that $SS^n=S^{n+1}$, and hence note that $S^n*S^0=SS^n=S^{n+1}$, which implies that \[S^n=\overset{n+1\text{ times}}{S^0*...*S^0}.\] Thus \[S^m*S^n=(\overset{n+1\text{ times}}{S^0*...*S^0})*(\overset{m+1\text{ times}}{S^0*...*S^0})=\overset{n+1+m+1\text{ times}}{S^0*...*S^0}=S^{m+n+1}.\]
 \end{proof}
 
+\begin{exercise}
+Show that the space obtained from $S^2$ by attaching $n$ $2$-cells along any collection of $n$ circles in $S^2$ is homotopy equivalent to the wedge sum of $n+1$ $2$-spheres.
+\end{exercise}
+\begin{proof}
+Let $A$ be the space obtained from $S^2$ by attaching $n$ $2$-cells. We can give $A$ a cell-complex structure as follows: We start with $n$ discs $A_1,...,A_n$, and we then draw lines between them such that the outer circles form part of a perimeter, and every region within the perimeter includes at most one circle $A_i$. Then attach $2$-cells to fill in the area within the perimeter, and another $2$-cell to the whole perimeter. This is shown in the following diagram: 
+
+\includegraphics[scale=0.5]{Screenshot (1351).png}
+
+
+We can then attach $n$ $2$-cells to the boundaries of the regions $A_1,...,A_n$ to get a space homeomorphic to $A$. Each $A_i$ is a contractible subcomplex, and hence we can collapse each $A_i$ to a point to obtain a space $B$ homotopy-equivalent to $A$, which consists of a sphere $S^2$ with $n$ other spheres attached to it at different points. We can then model $B$ as a cell-complex by starting with the points where the spheres are attached to the first sphere as $0$-cells, then adding $1$-cells to form a connected graph, then attaching $2$-cells to form a sphere, and then attaching $n$ more $2$-cells to each $0$-cell, as shown in the following diagram:
+
+\includegraphics[scale=0.5]{Screenshot (1352).png} 
+
+We can then repeatedly collapse each pair of vertices connected by an edge to a point, so as to end up with $\bigvee_{i=1}^{n+1}S^2$, which will be homotopy equivalent to $A$.
+\end{proof}
+
 \end{document}
