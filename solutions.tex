@@ -297,11 +297,22 @@ Show that the subspace $X\subset\mathbb{R}^3$ formed by a Klein bottle intersect
 \includegraphics[scale=0.5]{Screenshot 2025-08-06 at 01-25-18 AT.dvi - AT.pdf.png}
 \end{exercise}
 \begin{proof}
-First, we can collapse the disc whose boundary is the circle of intersection to a point, to obtain the $2$-sphere with $3$ distinct points identified. This is then homotopy equivalent to the diagram below, since we can collapse both green circles to obtain a sphere with three distinct points identified.
+First, we can collapse the disc whose boundary is the circle of intersection to a point, to obtain the $2$-sphere with $3$ distinct points identified. This is then homotopy equivalent to the diagram below, since we can collapse both segments $a$ and $b$ to obtain a sphere with three distinct points identified.
 
-\includegraphics[scale=0.5]{Screenshot (1353).png}
+\includegraphics[scale=0.5]{Screenshot (1355).png}
 
-\noindent However, we can also collapse just the lines $x$ and $y$ to points, which then gives $S^1\vee S^1\vee S^2$, as required.
+\noindent However, we can also collapse the segments $x$ and $y$ instead, which then gives $S^1\vee S^1\vee S^2$, as required.
+\end{proof}
+
+\begin{exercise}
+If $X$ is a connected Hausdorff space that is a union of a finite number of $2$-spheres, any two of which intersect in at most one point, show that $X$ is homotopy equivalent to a wedge sum of $S^1$'s and $S^2$'s.
+\end{exercise}
+\begin{proof}
+We first observe that if we have a sphere $A$, and spheres $A_1,...,A_n$ all connect to $A$ at points $a_1,...,a_n$, then we can connect the points by $1$-cells, and then collapse them all to a single point. This is shown in the following diagram, where the red dots are $a_1,...,a_n$, and the green lines are the $1$-cells.
+
+\includegraphics[scale=0.5]{Screenshot (1354).png}
+
+\noindent We can thus represent the spheres as a simple connected graph, where two vertices being connected by an edge represents a pair of spheres intersecting at a point. 
 \end{proof}
 
 \end{document}
