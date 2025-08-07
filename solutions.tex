@@ -308,11 +308,15 @@ First, we can collapse the disc whose boundary is the circle of intersection to 
 If $X$ is a connected Hausdorff space that is a union of a finite number of $2$-spheres, any two of which intersect in at most one point, show that $X$ is homotopy equivalent to a wedge sum of $S^1$'s and $S^2$'s.
 \end{exercise}
 \begin{proof}
-We first observe that if we have a sphere $A$, and spheres $A_1,...,A_n$ all connect to $A$ at points $a_1,...,a_n$, then we can connect the points by $1$-cells, and then collapse them all to a single point. This is shown in the following diagram, where the red dots are $a_1,...,a_n$, and the green lines are the $1$-cells.
+If we have a sequence $X_1,...,X_n$ of spheres, where $X_i$ is joined to $X_{i+1}\forall i\in[1,n)$, then we can collapse arcs in each of them to points to obtain $\bigvee_{i=1}^n S^2$, as shown below:
 
-\includegraphics[scale=0.5]{Screenshot (1354).png}
+\includegraphics[scale=0.5]{Screenshot (1357).png}
 
-\noindent We can thus represent the spheres as a simple connected graph, where two vertices being connected by an edge represents a pair of spheres intersecting at a point. 
+If we also had $X_1$ joined to $X_n$, we would then have a space homotopy equivalent to $S^1\vee\bigvee_{i=1}^n S^2$, as shown below:
+
+\includegraphics[scale=0.5]{Screenshot (1358).png}
+
+Hence, if we have $n$ spheres, and they form a graph with exactly $m$ loops, then the space is homotopy equivalent to $(\bigvee_{i=1}^m S^1)\vee(\bigvee_{i=1}^n S^2)$.
 \end{proof}
 
 \end{document}
