@@ -308,19 +308,20 @@ First, we can collapse the disc whose boundary is the circle of intersection to 
 If $X$ is a connected Hausdorff space that is a union of a finite number of $2$-spheres, any two of which intersect in at most one point, show that $X$ is homotopy equivalent to a wedge sum of $S^1$'s and $S^2$'s.
 \end{exercise}
 \begin{proof}
-If we have a sequence $X_1,...,X_n$ of spheres, where $X_i$ is joined to $X_{i+1}\forall i\in[1,n)$, then we can collapse arcs in each of them to points to obtain $\bigvee_{i=1}^n S^2$, as shown below:
+Firstly, we can represent the spheres as a simple connected graph, where each vertex represents a sphere, and two vertices being connected by an edge represents two spheres intersecting at a point. Let $T$ be a spanning tree of the graph. We can construct a CW complex of $X$ as follows: For each sphere $X_i$, let $A_i$ be the set of points of intersection of $X_i$ with other spheres which are connected to $X_i$ by an edge in $T$, and let $B_i$ be the set of points of intersection of $X_i$ with other spheres which are connected to $X_i$ by an edge not in $T$. We then form a $0$-skeleton consisting of $0$-cells which correspond to the points in $A_1\cup...\cup A_n$, and then pairs of $0$-cells, where each pair corresponds to a point in $B_1\cup...\cup B_n$. For each $i$, we connect all the points in $A_i$ together with a single point in every pair of points corresponding to $B_i$ by $1$-cells, so as to form a simple acyclic graph, which we shall denote as $G_i$. We then connect the points comprising each pair of points corresponding to $B_i$ with a $1$-cell. Finally, we attach a $2$-cell to each $G_i$, which then gives a space that is homotopy equivalent to $X$; for we can collapse the $1$-cells connecting the pairs of points in the $B_i$'s to obtain all the intersections. This is illustrated in the following diagram, where the black circles represent $2$-spheres, the green dots represent a pair in a $B_i$, the red points represent points in $A_i$, the purple lines represent $G_i$'s, and the blue line represents the line connecting the points in the $B_i$'s.
 
-\includegraphics[scale=0.5]{Screenshot (1357).png}
+\includegraphics[scale=0.5]{Screenshot (1361).png}
 
-If we also had $X_1$ joined to $X_n$, we would then have a space homotopy equivalent to $S^1\vee\bigvee_{i=1}^n S^2$, as shown below:
-
-\includegraphics[scale=0.5]{Screenshot (1358).png}
-
-Hence, if we have $n$ spheres, and they form a simple connected graph with exactly $m$ loops, then the space is homotopy equivalent to $(\bigvee_{i=1}^m S^1)\vee(\bigvee_{i=1}^n S^2)$.
+If we instead collapse each $G_i$ to a point, we then obtain a wedge sum of $n$ $2$-spheres, along with the loops corresponding to the $1$-cells connecting the pairs of points in the $B_i$'s, which are now all the same point.
 \end{proof}
 
 \begin{exercise}
 Let $X$ be a finite graph lying in a half-plane $P\subseteq \mathbb{R}^3$ and intersecting the edge of $P$ in a subset of the vertices of $X$. Describe the homotopy type of the 'surface of revolution' obtained by rotating $X$ about the edge line of $P$.
 \end{exercise}
+\begin{proof}
+Let $Y$ be the resulting surface. Firstly, we can assume without loss of generality that no edges in $P$ intersect each other; since if they do, we can simply call the point of intersection another vertex.
+
+Now assume that $X$ is connected. Let $l$ denote the number of loops in $X$. Each loop will become a torus in $Y$.
+\end{proof}
 
 \end{document}
