@@ -321,7 +321,22 @@ Let $X$ be a finite graph lying in a half-plane $P\subseteq \mathbb{R}^3$ and in
 \begin{proof}
 Let $Y$ be the resulting surface. Firstly, we can assume without loss of generality that no edges in $P$ intersect each other; since if they do, we can simply call the point of intersection another vertex.
 
-Now assume that $X$ is connected. Let $l$ denote the number of loops in $X$. Each loop will become a torus in $Y$.
+Now assume that $X$ is connected. Let $l$ denote the number of cycles in $X$. Let $T$ be a spanning tree of $X$, and let $l$ denote the number of cycles of $X$. $T$ is contractible, and hence $X\simeq \bigvee_{i=1}^l S^1$.
+
+We can enumerate all possibilities within $X$ as follows:
+\begin{enumerate}
+\item[(i)] Each cycle in $X$ will become a torus in $Y$.
+\item[(ii)] Each edge between different vertices in $X$, neither of which lie on the edge of $P$, will become an annulus in $Y$.
+\item[(iii)] Each edge between different vertices in $X$, only one of which lies on the edge of $P$, will become a disc in $Y$.
+\item[(iv)] Each edge between different vertices in $X$, both of which lie on the edge of $P$, will become $S^2$ in $Y$.
+\end{enumerate}
+\end{proof}
+
+\begin{exercise}
+Show that a CW complex is contractible if it is the union of two contractible subcomplexes whose intersection is also contractible.
+\end{exercise}
+\begin{proof}
+Let $X$ be a CW complex which is a union of contractible subcomplexes $A$ and $B$, where $A\cap B$ is also contractible. Then $X\simeq X/A\cong B/(A\cap B)\simeq B\simeq\{\text{pt}\}$.
 \end{proof}
 
 \end{document}
