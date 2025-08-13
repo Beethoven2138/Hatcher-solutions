@@ -246,7 +246,7 @@ For $k>0$, each $k$-skeleton $X^k\subseteq S^\infty$ is $S^{k-1}\cup e_1^k\cup e
 \begin{exercise}
 \begin{enumerate}
 \item[(a)] Show that the mapping cylinder of every map $f:S^1\to S^1$ is a CW complex.
-\item[(b)] Construct a 2-dimensional CW complex that contains both an annulus $S^1\times I$ and a Mobius band as deformation retracts.
+\item[(b)] Construct a 2-dimensional CW complex that contains both an annulus $S^1\times I$ and a M\"obius band as deformation retracts.
 \end{enumerate}
 \end{exercise}
 \begin{proof}
@@ -258,6 +258,10 @@ Observe the following diagram:
 \includegraphics[scale=0.5]{Screenshot (1346).png}
 
 We begin with a $1$-skeleton consisting of $e_1^0,e_2^0,e_1^1,e_2^1,e_3^1$. We then introduce a $2$-cell $e_1^2$. Let $\phi:S^1\to X^1$ be the attaching map of $e_1^2$. We define $\phi$ as follows: Identify the arc from $1$ to $2$ with $e_1^0\cup e_1^1$. Then identify the arc from $2$ to $3$ with $e_1^0\cup e_2^1\cup e_2^0$. Then identify the arc from $1$ to $4$ with $e_1^0\cup e_2^1\cup e_2^0$. Finally, let $A$ be the arc from $3$ to $4$. We then have homeomorphisms $g:A/3\sim 4\to S^1$ and $h:S^1\to e_3^1\cup e_2^0$ such that $h\circ f\circ g(3)=e_2^0$, and hence we can attach $A$ to $e_3^1$ under the identification $x\sim h\circ f\circ g(x)\forall x\in A$. This then gives a cell complex that is homeomorphic to $M_f$.
+\item[(b)] We can form a CW complex out of gluing $S^1\times I$ to the midcircle of the M\"obius band, as in the diagram below:
+
+
+\includegraphics[scale=0.5]{Screenshot (1366).png}\newline We can then deformation retract $S^1\times I$ onto the midcircle of the M\"obius band, and we can deformation retract the M\"obius band onto $S^1\times I$ by deformation retracting it onto its midcircle, which is identified with $S^1\times\{0\}$.
 \end{enumerate}
 \end{proof}
 
@@ -372,14 +376,22 @@ $SX\cong(\coprod_\alpha X_\alpha\times I)/\sim$, where\begin{align*}
 \forall\alpha:(x,0)&\sim(x',0)&\forall x,x'\in X_\alpha\\\forall\alpha:(x,1)&\sim(x',1)&\forall x,x'\in X_\alpha
 \end{align*} and hence if we select an $x_\alpha\in X_\alpha\forall\alpha$, we have $SX\cong(\coprod_\alpha SX_\alpha)/\sim$ where\begin{align*}
 [(x_\alpha,0)]&\sim[(x_{\alpha'},0)]&\forall \alpha,\alpha'\\ [(x_\alpha,1)]&\sim[(x_{\alpha'},1)]&\forall \alpha,\alpha'
-\end{align*} This can then be expressed as the quotient of a wedge sum with chosen points $[(x_\alpha,0)]$ as follows:\[\left.SX\cong\left(\bigvee_\alpha SX_\alpha\right)\middle/\sim\right.\] where\[[(x_\alpha,1)]\sim[(x_{\alpha'},1)]\forall \alpha,\alpha'.\]Now let $G$ be a connected acyclic graph with vertices $v_\alpha$. Call the set of vertices the subcomplex $A$. Then define $f:A\to \bigvee_\alpha SX_\alpha$ by $f(v_\alpha)=[(x_\alpha,1)]\forall\alpha$. It then follows that $SX\simeq\left(\bigvee_\alpha SX_\alpha\right)\sqcup_f G$, since we can collapse $G$ to identify every $[(x_\alpha,1)]$. Moreover, $f\simeq g$, where $g:A\to \bigvee_\alpha SX_\alpha$ maps every $v_\alpha$ to $[(x_\alpha,0)]$, and hence \[SX\simeq\left(\bigvee_\alpha SX_\alpha\right)\sqcup_f G\simeq\left(\bigvee_\alpha SX_\alpha\right)\sqcup_g G.\] This is in turn homeomorphic to \[Y\bigvee_\alpha SX_\alpha,\] where $Y$ is a graph consisting of a single vertex and $l-1$ loops, where $l$ is the number of components of $X$.\newline
+\end{align*} This can then be expressed as the quotient of a wedge sum with chosen points $[(x_\alpha,0)]$ as follows:\[\left.SX\cong\left(\bigvee_\alpha SX_\alpha\right)\middle/\sim\right.\] where\[[(x_\alpha,1)]\sim[(x_{\alpha'},1)]\forall \alpha,\alpha'.\]Now let $G$ be a connected acyclic graph with vertices $v_\alpha$. Call the set of vertices the subcomplex $A$. Then define $f:A\to \bigvee_\alpha SX_\alpha$ by $f(v_\alpha)=[(x_\alpha,1)]\forall\alpha$. It then follows that $SX\simeq\left(\bigvee_\alpha SX_\alpha\right)\sqcup_f G$, since we can collapse $G$ to identify every $[(x_\alpha,1)]$. Moreover, $f\simeq g$, where $g:A\to \bigvee_\alpha SX_\alpha$ maps every $v_\alpha$ to $[(x_\alpha,0)]$, and hence \[SX\simeq\left(\bigvee_\alpha SX_\alpha\right)\sqcup_f G\simeq\left(\bigvee_\alpha SX_\alpha\right)\sqcup_g G.\] $\left(\bigvee_\alpha SX_\alpha\right)\sqcup_g G$ is in turn homeomorphic to \[Y\bigvee_\alpha SX_\alpha,\] where $Y$ is a graph consisting of a single vertex and $l-1$ loops, where $l$ is the number of components of $X$.\newline
 
-\noindent Now let $X$ be a finite graph. Let $T_\alpha$ be a spanning tree of $X_\alpha$, and let $n_\alpha$ be the number of cycles in $X_\alpha$. $ST_\alpha$ is a contractible subcomplex, and every cycle of $G$ becomes a $2$-sphere in $SX_\alpha$. Hence, if $n_\alpha>0$, we have \[SX_\alpha\simeq S\left(\bigvee_{i=1}^{n_\alpha}S^1\right)\simeq\sum\left(\bigvee_{i=1}^{n_\alpha}S^1\right)=\bigvee_{i=1}^{n_\alpha}\sum S^1=\bigvee_{i=1}^{n_\alpha}S^2.\] Otherwise, if $n_\alpha=0$, then $SX_\alpha$ is simply contractible. If we define $\bigvee_{i=1}^0Q
+\noindent Now let $X$ be a finite graph. Let $T_\alpha$ be a spanning tree of $X_\alpha$, and let $n_\alpha$ be the number of edges in $X_\alpha$ that are not part of $T_\alpha$. $ST_\alpha$ is a contractible subcomplex, and every edge in $X_\alpha$ becomes a $2$-sphere in $SX_\alpha$. Hence, if $n_\alpha>0$, we have \[SX_\alpha\simeq S\left(\bigvee_{i=1}^{n_\alpha}S^1\right)\simeq\sum\left(\bigvee_{i=1}^{n_\alpha}S^1\right)=\bigvee_{i=1}^{n_\alpha}\sum S^1=\bigvee_{i=1}^{n_\alpha}S^2.\] Otherwise, if $n_\alpha=0$, then $SX_\alpha$ is simply contractible. If we define $\bigvee_{i=1}^0Q
 $ to be a point for any space $Q$, we then have\[SX\simeq \bigvee_{i=1}^{l-1}S^1\bigvee_{i=1}^{\sum_\alpha n_\alpha}S^2,\] as required.
 \end{proof}
 
 
 \begin{exercise}
 use Corollary 0.20 to show that if $(X,A)$ has the homotopy extension property, then $X\times I$ deformation retracts to $X\times\{0\}\cup A\times I$. Deduce from this that Proposition 0.18 holds more generally for any pair $(X_1,A)$ satisfying the homotopy extension property.
+\end{exercise}
+\begin{proof}
+Since $(X,A)$ has the homotopy extension property, it follows that $X\times\{0\}\cup A\times I$ is a retract of $X\times I$. Let $r:X\times I\to X\times\{0\}\cup A\times I$ be a retraction.
+\end{proof}
+
+
+\begin{exercise}
+Given a pair $(X,A)$ and a homotopy equivalence $f:A\to B$, show that the natural map $X\to B\sqcup_fX$ is a homotopy equivalence if $(X,A)$ satisfies the homotopy extension property. An interesting case is when $f$ is a quotient map, hence the map $X\to B\sqcup_f X$ is the quotient map identifying each set $f^{-1}(b)$ to a point. When $B$ is a point this gives another proof of Proposition $0.17$.
 \end{exercise}
 \end{document}
