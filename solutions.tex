@@ -387,7 +387,9 @@ $ to be a point for any space $Q$, we then have\[SX\simeq \bigvee_{i=1}^{l-1}S^1
 Use Corollary 0.20 to show that if $(X,A)$ has the homotopy extension property, then $X\times I$ deformation retracts to $X\times\{0\}\cup A\times I$. Deduce from this that Proposition 0.18 holds more generally for any pair $(X_1,A)$ satisfying the homotopy extension property.
 \end{exercise}
 \begin{proof}
-Since $(X,A)$ has the homotopy extension property, it follows that $X\times\{0\}\cup A\times I$ is a retract of $X\times I$. Let $r:X\times I\to X\times\{0\}\cup A\times I$ be a retraction.
+Firstly, $(X\times I, X\times\{0\}\cup A\times I)$ also satisfies the homotopy extension property. Let \[\iota:X\times\{0\}\cup A\times I\to X\times I\] be the inclusion map. Define \[\phi:X\times I\to X\times\{0\}\cup A\times I:(x,s)\mapsto(x,0).\] Then \[\iota\circ \phi(x,s)=(x,0)\forall (x,s)\in X\times I.\] Define \[h_t:X\times I\to X\times I\] by \[h_t(x,s)=(x,ts).\] Then $h_0=\iota\circ\phi$ and $h_1=\text{id}_{X\times I}$, and hence \[\iota\circ\phi\simeq\text{id}_{X\times I}.\] Furthermore, \[\phi\circ\iota(x,s)=(x,0)\forall (x,s)\in X\times \{0\}\cup A\times I.\] Now define \[g_t:X\times\{0\}\cup A\times I\to X\times\{0\}\cup A\times I\] by \[g_t(x,s)=\begin{cases}
+    (x,s)&\text{ if }x\not\in A,\\(x,ts)&\text{ if }x\in A.
+\end{cases}\] which is continuous by the pasting lemma. Then $g_0=\phi\circ\iota$ and $g_1=\text{id}_{X\times\{0\}\cup A\times I}$, and hence \[\phi\circ\iota\simeq \text{id}_{X\times\{0\}\cup A\times I}.\] Corollary $0.20$ then implies that $X\times I$ deformation retracts to $X\times\{0\}\cup A\times I$.
 \end{proof}
 
 
