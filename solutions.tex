@@ -389,7 +389,10 @@ Use Corollary 0.20 to show that if $(X,A)$ has the homotopy extension property, 
 \begin{proof}
 Firstly, $(X\times I, X\times\{0\}\cup A\times I)$ also satisfies the homotopy extension property. Let \[\iota:X\times\{0\}\cup A\times I\to X\times I\] be the inclusion map. Define \[\phi:X\times I\to X\times\{0\}\cup A\times I:(x,s)\mapsto(x,0).\] Then \[\iota\circ \phi(x,s)=(x,0)\forall (x,s)\in X\times I.\] Define \[h_t:X\times I\to X\times I\] by \[h_t(x,s)=(x,ts).\] Then $h_0=\iota\circ\phi$ and $h_1=\text{id}_{X\times I}$, and hence \[\iota\circ\phi\simeq\text{id}_{X\times I}.\] Furthermore, \[\phi\circ\iota(x,s)=(x,0)\forall (x,s)\in X\times \{0\}\cup A\times I.\] Now define \[g_t:X\times\{0\}\cup A\times I\to X\times\{0\}\cup A\times I\] by \[g_t(x,s)=\begin{cases}
     (x,s)&\text{ if }x\not\in A,\\(x,ts)&\text{ if }x\in A.
-\end{cases}\] which is continuous by the pasting lemma. Then $g_0=\phi\circ\iota$ and $g_1=\text{id}_{X\times\{0\}\cup A\times I}$, and hence \[\phi\circ\iota\simeq \text{id}_{X\times\{0\}\cup A\times I}.\] Corollary $0.20$ then implies that $X\times I$ deformation retracts to $X\times\{0\}\cup A\times I$.
+\end{cases}\] which is continuous by the pasting lemma. Then $g_0=\phi\circ\iota$ and $g_1=\text{id}_{X\times\{0\}\cup A\times I}$, and hence \[\phi\circ\iota\simeq \text{id}_{X\times\{0\}\cup A\times I}.\] Corollary $0.20$ then implies that $X\times I$ deformation retracts to $X\times\{0\}\cup A\times I$.\newline
+
+
+Now let $(X_1,A)$ be a pair satisfying the homotopy extension property, let $X_0$ be another topological space, and let $f,g:A\to X_0$ be homotopic. Let $F:A\times I\to X_0$ be a homotopy from $f$ to $g$. Consider the space $X_0\sqcup_F(X_1\times I)$. $X_1\times I$ deformation retracts onto $X_1\times\{0\}\cup A\times I$, and hence $X_0\sqcup_F(X_1\times I)$ deformation retracts onto $X_0\sqcup_F(X_1\times\{0\}\cup A\times I)$, which is in turn homeomorphic to $X_0\sqcup_fX_1$. Similarly, $X_1\times I$ deformation retracts onto $X_1\times\{1\}\cup A\times I$, and hence $X_0\sqcup_F(X_1\times I)$ deformation retracts onto $X_0\sqcup_gX_1$. Furthermore, these deformation retractions both fix $X_0$, and hence $X_0\sqcup_fX_1\simeq X_0\sqcup_gX_1\text{ rel }X_0$.
 \end{proof}
 
 
