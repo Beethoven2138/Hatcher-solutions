@@ -397,6 +397,9 @@ Now let $(X_1,A)$ be a pair satisfying the homotopy extension property, let $X_0
 \begin{exercise}
 Given a pair $(X,A)$ and a homotopy equivalence $f:A\to B$, show that the natural map $X\to B\sqcup_fX$ is a homotopy equivalence if $(X,A)$ satisfies the homotopy extension property. An interesting case is when $f$ is a quotient map, hence the map $X\to B\sqcup_f X$ is the quotient map identifying each set $f^{-1}(b)$ to a point. When $B$ is a point this gives another proof of Proposition $0.17$.
 \end{exercise}
+\begin{proof}
+By Corollary $0.21$, $A$ is a deformation retract of $M_f$, and hence $X$ is a deformation retract of $X\cup M_f$. By the previous exercise, $X\times\{0\}\cup A\times I$ is a deformation retract of $X\times I$, and hence $X\cup M_f$ is a deformation retract of $(X\times I)\sqcup B/\sim$, where $\sim$ is given by $(a,1)\sim f(a)\forall a\in A$. $(X\times I\sqcup B)/\sim$ in turn deformation retracts onto $(X\times\{1\}\sqcup B)/\sim$, which is homeomorphic to $B\sqcup_fX$.\[X\overset{\iota_1}{\longrightarrow} X\cup M_f\overset{\iota_2}{\longrightarrow} (X\times I\sqcup B)/\sim\overset{r}{\longrightarrow} B\sqcup_fX.\] $\iota_1:X\hookrightarrow X\cup M_f$ is a homotopy equivalence, $\iota_2:X\cup M_f\hookrightarrow (X\times I\sqcup B)/\sim$ is a homotopy equivalence, and the retraction $r:(X\times I\sqcup B)/\sim\to B\sqcup _fX$ given by $r([(x,s)])=[x]\forall (x,s)\in X\times I$ and $r([b])=[b]\forall b\in B$ is a homotopy equivalence. The composition of homotopy equivalences is a homotopy equivalence, and hence $r\circ \iota_2\circ\iota_1:X\to B\sqcup_fX$, which is precisely the natural map $X\to B\sqcup_fX$, is a homotopy equivalence.
+\end{proof}
 
 \begin{exercise}
 Show that if $(X_1,A)$ satisfies the homotopy extension property, then so does every pair $(X_0\sqcup_fX_1,X_0)$ obtained by attaching $X_1$ to a space $X_0$ via a map $f:A\to X_0$.
