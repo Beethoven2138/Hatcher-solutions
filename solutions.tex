@@ -405,16 +405,10 @@ By Corollary $0.21$, $A$ is a deformation retract of $M_f$, and hence $X$ is a d
 Show that if $(X_1,A)$ satisfies the homotopy extension property, then so does every pair $(X_0\sqcup_fX_1,X_0)$ obtained by attaching $X_1$ to a space $X_0$ via a map $f:A\to X_0$.
 \end{exercise}
 \begin{proof}
-We need to show that $(X_0\sqcup_fX_1)\times\{0\}\cup X_0\times I$ is a retract of $(X_0\sqcup_fX_1)\times I$.
-
-We have that $X_1\times\{0\}\cup A\times I$ is a retract of $X_1\times I$, and hence $(X_1\times\{0\}\cup A\times I)\sqcup X_0/(a, 0)\sim f(a)$ is a retract of $(X_1\times I)\sqcup X_0/(a,0)\sim f(a)$.
-
-Suppose we have a map $f_0:X_0\sqcup_fX_1\to Y$ and a homotopy $f_t:X_0\to Y$ of $f_0|X_0$. This in turn induces a homotopy on $A$ given by $f_t\circ f$ so that $f_t$ can be expressed as \[f_t(x_0)=\begin{cases}
-f_t\circ f(a)&\text{if }x_0=f(a)\text{ for some }a\in A,\\f_t(x_0)&\text{otherwise}.
-\end{cases}\] Since $(X_1,A)$ satisfies the HEP, it follows that $f_t\circ f:A\to Y$ can be extended to a homotopy $g_t:X_1\to Y$ with $g_1(x)=f_0([x])\forall x\in X_1$. We can thus extend $f_t$ to a homotopy $f_t:X_0\sqcup_fX_1\to Y$ given by \[f_t([x])=\begin{cases}
+Suppose we have a map $f_0:X_0\sqcup_fX_1\to Y$ and a homotopy $f_t:X_0\to Y$ of $f_0|X_0$. This in turn induces a homotopy on $A$ given by $f_t\circ f$. Since $(X_1,A)$ satisfies the HEP, it follows that $f_t\circ f:A\to Y$ can be extended to a homotopy $g_t:X_1\to Y$ with $g_0(x)=f_0([x])\forall x\in X_1$. We can thus extend $f_t$ to a homotopy $f_t:X_0\sqcup_fX_1\to Y$ given by \[f_t([x])=\begin{cases}
     g_t(x)&\text{if }x\in X_1,\\
     f_t(x)&\text{if }x\in X_0.
-\end{cases}\]This is well-defined, for if $x\in A$, then $g_t(x)=f_t\circ f(x)=f_t([x])$. We now show that $f_t$ is continuous. First, define a homotopy $F:(X_0\sqcup X_1)\times I:F(x,t)\mapsto f_t([x])$. $\iota_0(X_0)\times I$ and $\iota_1(X_1)\times I$ are both closed in $(X_0\sqcup X_1)\times I$ as a consequence of the coproduct topology, $\iota_0(X_0)\times I\cup \iota_1(X_1)\times I=(X_0\sqcup X_1)\times I$, and $F$ is continuous when restricted to both $\iota_0(X_0)\times I$ and $\iota_1(X_1)\times I$, and hence $F$ is continuous on $(X_0\sqcup X_1)\times I$ by the Pasting lemma. Let $q:(X_0\sqcup X_1)\times I\to (X_0\sqcup_fX_1)\times I:(x,t)\mapsto([x],t)$ be the quotient map. $F$ then descends to a map $G:(X_0\sqcup_fX_1)\times I:([x],t)\mapsto F(x,t)$, which is continuous by the universal property of the final topology, since $F=G\circ q$. $G([x],t)=f_t([x])\forall[x]\in X_0\sqcup_fX_1$, and hence $f_t$ is continuous, so a homotopy.
+\end{cases}\]This is well-defined, for if $x\in A$, then $g_t(x)=f_t\circ f(x)=f_t([x])$. We now show that $f_t$ is continuous. First, define a homotopy $F:(X_0\sqcup X_1)\times I:F(x,t)\mapsto f_t([x])$. Let $\iota_0,\iota_1$ be the inclusion maps of $X_0$ and $X_1$ respectively into $X_0\sqcup X_1$. $\iota_0(X_0)\times I$ and $\iota_1(X_1)\times I$ are both closed in $(X_0\sqcup X_1)\times I$ as a consequence of the coproduct topology, $\iota_0(X_0)\times I\cup \iota_1(X_1)\times I=(X_0\sqcup X_1)\times I$, and $F$ is continuous when restricted to both $\iota_0(X_0)\times I$ and $\iota_1(X_1)\times I$, and hence $F$ is continuous on $(X_0\sqcup X_1)\times I$ by the Pasting lemma. Let \[q:(X_0\sqcup X_1)\times I\to (X_0\sqcup_fX_1)\times I:(x,t)\mapsto([x],t)\] be the quotient map. $F$ then descends to a map $G:(X_0\sqcup_fX_1)\times I:([x],t)\mapsto F(x,t)$, which is continuous by the universal property of the final topology, since $F=G\circ q$. $G([x],t)=f_t([x])\forall[x]\in X_0\sqcup_fX_1$, and hence $f_t$ is continuous, so a homotopy. Thus $(X_0\sqcup_fX_1,X_0)$ has the HEP.
 \end{proof}
 
 \begin{exercise}
