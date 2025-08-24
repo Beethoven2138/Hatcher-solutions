@@ -419,4 +419,29 @@ Indeed, $I$ is a compact Hausdorff space, and hence locally compact, so the resu
 \begin{exercise}
 In case the CW complex $X$ is obtained from a subcomplex $A$ by attaching a single cell $e^n$, describe exactly what the extension of a homotopy $f_t:A\to Y$ to $X$ given by the proof of Proposition $0.16$ looks like. That is, for a point $x\in e^n$, describe the path $f_t(x)$ for the extended $f_t$.
 \end{exercise}
+\begin{proof}
+Define $F:X\times I\to Y$ by $F(x,t)=f_t(x)$. The extension of $F:X\times\{0\}\cup A\times I\to Y$ is simply $F\circ R:X\times I\to Y$, where $R$ is the retraction of $X\times I$ to $X\times\{0\}\cup A\times I$ given in Proposition 0.16.
+
+Let $r:D^n\times I\to D^n\times\{0\}\cup \partial D^n\times I$ be the retraction of $D^n\times I$ described in Proposition 0.16. 
+We consider three different cases:
+\begin{enumerate}
+\item[(i)] If $x$ is in the centre of $e^n$, then $r(x,t)=(x,0)\forall t\in I$. 
+
+\item[(ii)] If $2-2\|x\|> 1$, then $r(x,t)$ simply moves $x$ radially outwards from the centre towards $\frac{x}{\|x\|}$ as $t$ increases, while keeping the $I$ component at $0$. In particular, if $p_x:I\to D^n:t\mapsto\frac{2x}{2-t}$ is the line $x$ travels on outwards from the centre as $t$ increases, then we have $r(x,t)=(p_x(t),0)$.
+
+\item[(iii)] Otherwise,  $r(x,t)$ moves radially outwards from $(x,0)$ at $t=0$ to $\left(\frac{x}{\|x\|},0\right)$ at $t=2-2\|x\|$. For $t\geq2-2\|x\|$, we simply increase the value of the $I$ component. Explicitly, if we let $p_x:[0,2-2\|x\|]\to D^n:t\mapsto\frac{2x}{2-t}$ be the line from $x$ to $\frac{x}{\|x\|}$, then\[r(x,t)=\begin{cases}
+    (p_x(t),0)&\text{if }t< 2-2\|x\|,\\
+    \left(\frac{x}{\|x\|},2-\frac{2-t}{\|x\|}\right)&\text{if }t\geq2-2\|x\|.
+\end{cases}\]
+\end{enumerate}
+We can now describe the path of $f_t(x)$. Let $\phi:\partial D^n\to A$ be the attaching map of $e^n$.
+\begin{enumerate}
+\item[(i)] In the first situation, where $x$ is in the centre of $e^n$, then $f_t(x)=f_0(x)\forall t$.
+\item[(ii)] In the second situation, where $2-2\|x\|> 1$, then $f_t(x)=f_0\left(\frac{2x}{2-t}\right)\forall t$.
+\item[(iii)] In the final situation, where $2-2\|x\|\leq 1$, then\[f_t(x)=\begin{cases}
+    f_0\left(\frac{2x}{2-t}\right)&\text{if }t<2-2\|x\|,\\
+    f_{2-\frac{2-t}{\|x\|}}\circ\phi\left(\frac{x}{\|x\|}\right)&\text{if }t\geq 2-2\|x\|.
+\end{cases}\]
+\end{enumerate}
+\end{proof}
 \end{document}
