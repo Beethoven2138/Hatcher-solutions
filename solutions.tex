@@ -464,6 +464,13 @@ We can now describe the path of $f_t(x)$. Let $\phi:\partial D^n\to A$ be the at
 Show that the composition of paths satisfies the following cancellation property: If $f_0\cdot g_0\sim f_1\cdot g_1$ and $g_0\sim g_1$ then $f_0\sim f_1$.
 \end{exercise}
 \begin{proof}
-Let $\overline{g_0}$ and $\overline{g_1}$ be the reversals of $g_0$ and $g_1$ respectively. Then\[f_0\sim f_0\circ g_0\circ\overline{g_0}\sim f_1\circ g_1\circ \overline{g_0}\sim f_1\circ g_1\circ \overline{g_1}\sim f_1.\]
+Let $\overline{g_0}$ and $\overline{g_1}$ be the reversals of $g_0$ and $g_1$ respectively. Then\[f_0\sim f_0\cdot g_0\cdot\overline{g_0}\sim f_1\cdot g_1\cdot \overline{g_0}\sim f_1\cdot g_1\cdot \overline{g_1}\sim f_1.\]
+\end{proof}
+
+\begin{exercise}
+Show that the change-of-basepoint homomorphism $\beta_h$ depends only on the homotopy class of $h$.
+\end{exercise}
+\begin{proof}
+Let $h\sim g$ as paths from $x_0$ to $x_1$. Let $[f]\in\pi_1(X,x_1)$. Then \[\beta_h([f])=[h\cdot f\cdot\overline{h}]=[g\cdot f\cdot\overline{h}]=[g\cdot f\cdot\overline{g}]=\beta_g([f]).\]
 \end{proof}
 \end{document}
