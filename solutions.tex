@@ -473,4 +473,17 @@ Show that the change-of-basepoint homomorphism $\beta_h$ depends only on the hom
 \begin{proof}
 Let $h\sim g$ as paths from $x_0$ to $x_1$. Let $[f]\in\pi_1(X,x_1)$. Then \[\beta_h([f])=[h\cdot f\cdot\overline{h}]=[g\cdot f\cdot\overline{h}]=[g\cdot f\cdot\overline{g}]=\beta_g([f]).\]
 \end{proof}
+
+\begin{exercise}
+For a path-connected space $X$, show that $\pi_1(X)$ is abelian iff all basepoint-change homomorphisms $\beta_h$ depend only on the endpoints of the path $h$.
+\end{exercise}
+\begin{proof}
+$(\implies):$ Let $h$ and $g$ be two paths from $x_0$ to $x_1$. Let $[f]\in\pi_1(X,x_1)$. Then\begin{align*}\beta_h([f])\beta_g([f])^{-1}&=[h\cdot f\cdot\overline{h}][g\cdot\overline{f}\cdot \overline{g}]\\&=[h\cdot f\cdot(\overline{h}\cdot g)\cdot\overline{f}\cdot \overline{g}]\\&=[h\cdot(\overline h\cdot g)\cdot f\cdot \overline{f}\cdot \overline{g}]\\&=e\end{align*}and hence $\beta_h([f])=\beta_g([f])$.
+
+$(\impliedby):$ Let $[f],[g]\in\pi_1(X,x_1)$. We have $\beta_{[f]}=\beta_{[g]}$, so\[[f][g][f]^{-1}=[f\cdot g\cdot \overline{f}]=\beta_{[f]}([g])=\beta_{[g]}([g])=[g\cdot g\cdot \overline{g}]=[g]\] and hence\[[f][g]=[g][f].\] Thus $\pi_1(X)$ is abelian.
+\end{proof}
+
+\begin{exercise}
+A subspace $X\subset\mathbb{R}^3$ is said to be star-shaped if there is a point $x_0\in X$ such that, for each $x\in X$, the line segment from $x_0$ to $x$ lies in $X$. Show that if a subspace $X\subset\mathbb{R}^3$ is locally star-shaped, in the sense that every point of $X$ has a star-shaped neighborhood in $X$, then every path in $X$ is homotopic in $X$ to a piecewise linear path, that is, a path consisting of a finite number of straight line segments traversed at constant speed. Show this applies in particular when $X$ is open or when $X$ is a union of finitely many closed convex sets.
+\end{exercise}
 \end{document}
