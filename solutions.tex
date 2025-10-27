@@ -498,4 +498,18 @@ When $X$ is open, every $x\in X$ is contained in a ball, which is star-shaped, a
 
 Now let $X$ be a union of finitely many closed convex sets $C_1,...,C_n$. Let $x\in X$. Let $C_{i_1},...,C_{i_m}$ be the collection of $C_i$'s which don't contain $x$. $X\setminus C_i$ is open $\forall C_i$, since $C_i$ is closed, and hence for each $C_{i_k}$ we can find an open ball $B_{i_k}\subseteq C_{i_k}^c$ which contains $x$. Consider $X\cap \bigcap_{k=1}^mB_{i_k}\subseteq X\setminus\bigcup_{k=1}^mC_{i_k}$. This set is open, as the finite intersection of open sets, and contains $x$. Let $y\in X\cap \bigcap_{k=1}^mB_{i_k}$. $y$ is then contained in a $C_i$ which also contains $x$. Since $C_i$ is convex, the line segment between $x$ and $y$ is then contained in $X$. Furthermore, the line segment between $x$ and $y$ is contained in $\bigcap_{k=1}^mB_{i_k}$, for the intersection of convex sets is convex, and hence the line segment between $x$ and $y$ is contained in $X\cap \bigcap_{k=1}^mB_{i_k}$. Hence $X\cap \bigcap_{k=1}^mB_{i_k}$ is a star-shaped neighbourhood of $x$, so $X$ is locally star-shaped.
 \end{proof}
+
+\begin{exercise}
+Show that for a space $X$, the following three conditions are equivalent:
+\begin{enumerate}
+    \item[(a)] Every map $S^1\to X$ is homotopic to a constant map, with image a point.
+    \item[(b)] Every map $S^1\to X$ extends to a map $D^2\to X$.
+    \item[(c)] $\pi_1(X,x_0)=0\forall x_0\in X$.
+\end{enumerate}
+Deduce that a space $X$ is simply-connected iff all maps $S^1\to X$ are homotopic. [In this problem, 'homotopic' means 'homotopic without regard to basepoints'.]
+\end{exercise}
+\begin{proof}
+$(a)\implies (b)$: Let $f:S^1\to X$ be a map homotopic to a constant map $\gamma_x$. We have a homotopy $H:S^1\times I\to X$ from $f$ to $\gamma_x$. Define the equivalence relation $\sim$ on $S^1\times I$ by $(\omega,1)\sim(\omega',1)\forall \omega,\omega'\in S^1$. We then obtain a well-defined map $g:S^1\times I/\sim\to X$ given by $g([\omega,t])=H(\omega,t)$. This is well-defined because $H(\omega,1)=x\forall \omega$. Let $\pi:S^1\times I\to S^1\times I/\sim$ be the quotient map. $g\circ\pi= H$ is continuous, and hence $g$ is continuous by the universal property of the quotient topology. Furthermore, $S^1\times I/\sim\cong D^2$. Let $\iota:S^1\hookrightarrow S^1\times I/\sim :\omega\mapsto[(\omega,0)]$ be the inclusion map. We then have that $f=g\circ \iota$, and hence $g$ is an extension of $f$ to $D^2$.
+\end{proof}
+
 \end{document}
