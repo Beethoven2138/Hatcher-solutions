@@ -515,7 +515,11 @@ $(b)\implies (c)$: Let $p:I\to X$ be a loop. This then induces a map $p':S^1\to 
 
 $(c)\implies (a)$ Suppose we have a map $f:S^1\to X$. If we define $S^1$ as $I/0\sim 1$, this gives a path $p:I\to X:t\mapsto f([t])$, which is continuous by the universal property of the quotient topology. Let $x_0=p(0)$. Since $\pi_1(X,x_0)=0$, if follows that $p$ is based-homotopic to $\gamma_{x_0}$. Let $F:I^2\to X$ be the homotopy, so that $F(t,0)=p(t),F(t,1)=x_0,F(0,s)=F(1,s)=x_0$. If we identify $S^1\times I$ with $I^2/(0,t)\sim (1,t)$, we can then obtain a homotopy $G:S^1\times I\to X:[(t,s)]\mapsto F((t,s))$ from $f$ to a constant map, which is continuous by the universal property of the quotient topology, and which is well-defined, since $F(0,s)=F(1,s)\forall s$. Hence $f$ is homotopic to a constant map, with image a point.
 
+Finally, suppose all maps $S^1\to X$ are homotopic. That in particular implies that every map is homotopic to a constant map, and hence that $\pi_1(X,x_0)=0\forall x_0\in X$ ($(a)\implies(c)$). Now let $x_0$ be some chosen point in $X$. We have that for every $x\in X$, the constant map $\gamma_x:S^1\to X:\omega\mapsto x$ is homotopic to $\gamma_{x_0}$. This implies that there is a path from $x$ to $x_0$. Hence $X$ is path-connected, so is simply-connected.
 
+Now suppose that $X$ is simply connected. We pick some point $x_0$ and will show that every map $f:S^1\to X$ is homotopic to $\gamma_{x_0}$, since then all maps $S^1\to X$ will be homotopic due to homotopy being an equivalence relation. Given a map $f:S^1\to X$, we have that $f$ is homotopic to a constant map. Let $\gamma_x$ be that constant map. Since $X$ is simply-connected, and hence path-connected, there exists a path $p:I\to X$ from $x$ to $x_0$. We can then obtain a homotopy from $\gamma_x$ to $\gamma_{x_0}$ given by $h_t:S^1\to X:\omega\to p(t)$. It then follows by transitivity that $f$ is homotopic to $\gamma_{x_0}$, as required.
+
+Hence $X$ is simply-connected iff all maps $S^1\to X$ are homotopic.
 \end{proof}
 
 \end{document}
