@@ -523,7 +523,15 @@ Hence $X$ is simply-connected iff all maps $S^1\to X$ are homotopic.
 \end{proof}
 
 \begin{exercise}
-We can regard $\pi_1(X,x_0)$ as the set of basepoint-preserving homotopy classes of maps $(S^1,s_0)\to(X,x_0)$. Let $[S^1,X]$ be the set of homotopy classes of maps $S^1\to X$, with no conditions on basepoints. THus there is a natural map $\Phi:\pi_1(X,x_0)\to [S^1,X]$ obtained by ignoring basepoints. Show that $\Phi$ is surjective if $X$ is path-connected, and that $\Phi([f])=\Phi([g])$ iff $[f]$ and $[g]$ are conjugate in $\pi_1(X,x_0)$. Hence $\Phi$ induces a bijection between $[S^1,X]$ and the set of conjugacy classes in $\pi_1(X)$, when $X$ is path-connected.
+We can regard $\pi_1(X,x_0)$ as the set of basepoint-preserving homotopy classes of maps $(S^1,s_0)\to(X,x_0)$. Let $[S^1,X]$ be the set of homotopy classes of maps $S^1\to X$, with no conditions on basepoints. Thus there is a natural map $\Phi:\pi_1(X,x_0)\to [S^1,X]$ obtained by ignoring basepoints. Show that $\Phi$ is surjective if $X$ is path-connected, and that $\Phi([f])=\Phi([g])$ iff $[f]$ and $[g]$ are conjugate in $\pi_1(X,x_0)$. Hence $\Phi$ induces a bijection between $[S^1,X]$ and the set of conjugacy classes in $\pi_1(X)$, when $X$ is path-connected.
 \end{exercise}
+\begin{proof}
+We will assume without loss of generality that $S^1:=I/0\sim 1$, and that $s_0=[0]$. Suppose that $X$ is path-connected. Let $f:S^1\to X$ be a representative of an element of $[S^1,X]$ such that $f(s_0)=x$, for some $x\in X$. Let $f':I\to X$ be the corresponding loop of $f$, so that $f([t])=f'(t)$. Let $p:I\to X$ be a path from $x_0$ to $x$. We can then construct a loop $g:S^1\to X\in\pi_1(X,x_0)$ by defining its corresponding map $g':I\to X$ by $g'=p\cdot f'\cdot\overline{p}$ (where each path is traversed at $3$ times the speed), which is then homotopic to $f'$ under the homotopy $F':I\times I\to X$ given by\[F'(t,s)=\begin{cases}
+    p((1-3t)s+3t)&\text{if }t\leq\frac{1}{3},\\
+    f'(3(t-\frac{1}{3}))&\text{if }t\in[\frac{1}{3},\frac{2}{3}],\\
+    \overline{p}((1-3(t-\frac{2}{3}))s+3(t-\frac{2}{3}))&\text{if }t\geq\frac{2}{3}.
+\end{cases}\]Since $F'(0,s)=F'(1,s)\forall s$, it follows that $F'$ also gives a well-defined homotopy $F:S^1\times I\to X$ from $g$ to $f$ given by $F([t],s)=F'(t,s)$. Hence $\Phi([g])=[f]$ so $\Phi$ is surjective.
+\end{proof}
+
 
 \end{document}
