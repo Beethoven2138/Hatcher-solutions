@@ -546,5 +546,14 @@ Now suppose $\Phi([f])=\Phi([g])$. Let $'G:I\times I\to X$ be a homotopy from $f
 Let $\sim$ be the equivalence relation of conjugation on $\pi_1(X)$. and let $\Psi:\pi_1(X)/\sim\to[S^1,X]:[a]\mapsto\Phi(a)$ be the induced map on conjugacy classes. This map is well-defined, since if $[f]$ and $[g]$ are conjugate in $\pi_1(X)$, then $\Psi([[f]])=\Phi([f])=\Phi([g])=\Psi([[g]])$. Furthermore, $\Psi$ is injective, since if $\Psi([[f]])=\Psi([[g]])$, then $[[f]]=[[g]]$. Hence, if $X$ is path-connected, $\Psi$ is both injective and surjective, so is bijective.
 \end{proof}
 
+\begin{exercise}
+Define $f:S^1\times I\to S^1\times I$ by $f(\theta,s)=(\theta+2\pi s,s)$, so $f$ restricts to the identity on the boundary circles of $S^1\times I$. Show that $f$ is homotopic to the identity by a homotopy $f_t$ that is stationary on one of the boundary circles, but not by any homotopy $f_t$ that is stationary on both boundary circles. [Consider what $f$ does to the path $s\mapsto(\theta_0,s)$ for fixed $\theta_0\in S^1$.]
+\end{exercise}
+\begin{proof}
+Let $f_t$ be a homotopy from $\text{id}_{S^1\times I}$ to $f$ with the associated map $F$ defined as \[F:S^1\times I\times I\to S^1\times I:(\theta,s,t)\mapsto(\theta+2\pi st,s).\] When $s=0$, we have $f_t(\theta,0)=(\theta,0)\forall t$, as required.
+
+Suppose for a contradiction that there exists a homotopy $f_t$ from $f$ to $\text{id}_{S^1\times I}$ which is stationary on both boundary circles. 
+Consider the path $p:I\to S^1\times I:s\mapsto(\theta_0,s)$. We then have a homotopy of paths \[f_t\circ p:I\to S^1\times I\] such that \[f_0\circ p(s)=(\theta_0+2\pi s,s)\] and \[f_1\circ p(s)=(\theta_0,s).\] Let $\pi_{S_1}:S^1\times I\to S^1$ be the projection map from $S^1\times I$ to $S^1$. Then $\pi_{S^1}\circ f_t\circ p:I\to S^1$ is a homotopy from \[\pi_{S^1}\circ f_0\circ p:I\to S^1:s\mapsto\theta_0+2\pi s\] to \[\pi_{S^1}\circ f_1\circ p:I\to S^1:s\mapsto\theta_0.\] However, $\pi_{S^1}\circ f_t\circ p$ is not homotopic to the constant loop; a contradiction. Hence no such homotopy can exist.
+\end{proof}
 
 \end{document}
