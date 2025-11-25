@@ -553,7 +553,11 @@ Define $f:S^1\times I\to S^1\times I$ by $f(\theta,s)=(\theta+2\pi s,s)$, so $f$
 Let $f_t$ be a homotopy from $\text{id}_{S^1\times I}$ to $f$ with the associated map $F$ defined as \[F:S^1\times I\times I\to S^1\times I:(\theta,s,t)\mapsto(\theta+2\pi st,s).\] When $s=0$, we have $f_t(\theta,0)=(\theta,0)\forall t$, as required.
 
 Suppose for a contradiction that there exists a homotopy $f_t$ from $f$ to $\text{id}_{S^1\times I}$ which is stationary on both boundary circles. 
-Consider the path $p:I\to S^1\times I:s\mapsto(\theta_0,s)$. We then have a homotopy of paths \[f_t\circ p:I\to S^1\times I\] such that \[f_0\circ p(s)=(\theta_0+2\pi s,s)\] and \[f_1\circ p(s)=(\theta_0,s).\] Let $\pi_{S_1}:S^1\times I\to S^1$ be the projection map from $S^1\times I$ to $S^1$. Then $\pi_{S^1}\circ f_t\circ p:I\to S^1$ is a homotopy from \[\pi_{S^1}\circ f_0\circ p:I\to S^1:s\mapsto\theta_0+2\pi s\] to \[\pi_{S^1}\circ f_1\circ p:I\to S^1:s\mapsto\theta_0.\] However, $\pi_{S^1}\circ f_t\circ p$ is not homotopic to the constant loop; a contradiction. Hence no such homotopy can exist.
+Consider the path $p:I\to S^1\times I:s\mapsto(\theta_0,s)$. We then have a homotopy of paths \[f_t\circ p:I\to S^1\times I\] such that \[f_0\circ p(s)=(\theta_0+2\pi s,s)\] and \[f_1\circ p(s)=(\theta_0,s).\] Let $\pi_{S^1}:S^1\times I\to S^1$ be the projection map from $S^1\times I$ to $S^1$. Then $\pi_{S^1}\circ f_t\circ p:I\to S^1$ is a homotopy from \[\pi_{S^1}\circ f_0\circ p:I\to S^1:s\mapsto\theta_0+2\pi s\] to \[\pi_{S^1}\circ f_1\circ p:I\to S^1:s\mapsto\theta_0.\] Since $f_t$ is stationary on both boundary circles, it follows that \[\pi_{S^1}\circ f_t\circ p(0)=\pi_{S^1}\circ f_t\circ p(1)=\theta_0\forall t,\] and hence $\pi_{S^1}\circ f_t\circ p$ is a homotopy of loops based at $\theta_0$. However, $\pi_{S^1}\circ f_0\circ p$ is not homotopic to the constant loop; a contradiction. Hence no such homotopy can exist.
 \end{proof}
+
+\begin{exercise}
+Does the Borsuk-Ulam theorem hold for the torus? In other words, for every map $f:S^1\times S^1\to\mathbb{R}^2$ must there exist $(x,y)\in S^1\times S^1$ such that $f(x,y)=f(-x,-y)$?
+\end{exercise}
 
 \end{document}
