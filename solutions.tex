@@ -536,6 +536,14 @@ let $f,g:(S^1,s_0)\to (X,x_0)$ be loops such that $[f]$ and $[g]$ are conjugate;
     g'(3(t-\frac{1}{3}))&\text{if }t\in[\frac{1}{3},\frac{2}{3}],\\
     a'(3s(t-\frac{2}{3}))&\text{if }t\geq\frac{2}{3}.
 \end{cases}\] $H'(t,0)$ is a reparametrization of $g'$, and $H'(t,1)=\overline{a}'\cdot g'\cdot a'(t)$, and hence $H'$ is a homotopy from $g'$ to $\overline{a}'\cdot g'\cdot a'$ (up to reparametrization). It then follows from transitivity that $g'$ is homotopic to $f'$, and hence that $\Phi([g])=\Phi([f])$.
+
+Now suppose $\Phi([f])=\Phi([g])$. Let $'G:I\times I\to X$ be a homotopy from $f'$ to $g'$, which does not necessarily preserve basepoints. Define $p:I\to X$ by $p(t)=G'(0,t)$. Consider the map $U':I\times I\to X$ given by\[U'(t,s)=\begin{cases}
+    p(3st)&\text{if }t\leq\frac{1}{3},\\
+    G'(3(t-\frac{1}{3}),s)&\text{if }t\in[\frac{1}{3},\frac{2}{3}],\\
+    \overline{p}(1-s+3s(t-\frac{2}{3}))&\text{if }t\geq\frac{2}{3}.
+\end{cases}\] This is a based homotopy between $f$ and $p\cdot g\cdot\overline{p}$ (up to reparametrization). Hence, $[f]$ and $[g]$ are conjugate in $\pi_1(X,x_0)$.
+
+Let $\sim$ be the equivalence relation of conjugation on $\pi_1(X)$. and let $\Psi:\pi_1(X)/\sim\to[S^1,X]:[a]\mapsto\Phi(a)$ be the induced map on conjugacy classes. This map is well-defined, since if $[f]$ and $[g]$ are conjugate in $\pi_1(X)$, then $\Psi([[f]])=\Phi([f])=\Phi([g])=\Psi([[g]])$. Furthermore, $\Psi$ is injective, since if $\Psi([[f]])=\Psi([[g]])$, then $[[f]]=[[g]]$. Hence, if $X$ is path-connected, $\Psi$ is both injective and surjective, so is bijective.
 \end{proof}
 
 
