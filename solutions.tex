@@ -559,5 +559,10 @@ Consider the path $p:I\to S^1\times I:s\mapsto(\theta_0,s)$. We then have a homo
 \begin{exercise}
 Does the Borsuk-Ulam theorem hold for the torus? In other words, for every map $f:S^1\times S^1\to\mathbb{R}^2$ must there exist $(x,y)\in S^1\times S^1$ such that $f(x,y)=f(-x,-y)$?
 \end{exercise}
+\begin{proof}
+Let $S^1$ be the unit circle in $\mathbb{R}^2$. We then define $f:S^1\times S^1\to\mathbb{R}^2$ by $f(x,y)=x$. Then \begin{align*}
+    f(x,y)=f(-x,-y)&\iff x=-x\\&\iff x=(0,0).
+\end{align*} However, $(0,0)\not\in S^1$; a contradiction.
+\end{proof}
 
 \end{document}
