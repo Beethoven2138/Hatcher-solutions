@@ -565,4 +565,17 @@ Let $S^1$ be the unit circle in $\mathbb{R}^2$. We then define $f:S^1\times S^1\
 \end{align*} However, $(0,0)\not\in S^1$; a contradiction.
 \end{proof}
 
+\begin{exercise}
+Let $A_1,A_2,A_3$ be compact sets in $\mathbb{R}^3$. Use the Borsuk-Ulam theorem to show that there is one plane $P\subset\mathbb{R}^3$ that simultaneously divides each $A_t$ into two pieces of equal measure.
+\end{exercise}
+\begin{proof}
+Let $\lambda_3:\mathcal{B}_3\to\mathbb{R}$ be the three-dimensional Lebesgue measure. $A_1,A_2,A_3$ are all measurable sets with finite Lesbesgue measure, due to compactness. Let $N:=(0,0,0,1)$, and let $x\in S^3$. Then let $K_x$ be the hyperplane passing through $N$ and normal to $x$. Then let $H_x$ be the intersection of $K_x$ with the hyperplane $x_4=0$, so that $H_x$ will be $\emptyset$ when $x=\pm N$, and a plane otherwise. Now let $B_x^+$ be the connected component of $\mathbb{R}^4\setminus K_x$ containing $x$, and let $B_x^-$ be the other connected component. We note that $B_{-x}^\pm=B_x^\mp$, since changing the sign of $x$ does not alter $K_x$, but it does alter which side of $K_x$ that $x$ lies on. Now we define $C_x^\pm:=B_x^\pm\cap\mathbb{R}^3$. We then observe that \[C_{-x}^+=B_{-x}^+\cap\mathbb{R}^3=B_x^-\cap\mathbb{R}^3=C_x^-.\] Now let \[f_i:S^3\to\mathbb{R}:x\mapsto\lambda_3(C_x^+\cap A_i).\] We then have \[f_i(-x)=\lambda_3(C_{-x}^+\cap A_i)=\lambda_3(C_x^-\cap A_i)\forall x\in S^3.\] We now define \[f:S^3\to\mathbb{R}^3:x\mapsto(f_1(x), f_2(x), f_3(x)),\] which is continuous by the universal property of the product topology. Hence, by the Borsuk-Ulam theorem, $\exists x_0\in S^3$ such that $f(x_0)=f(-x_0)$, or where $\lambda_3(C_{x_0}^+\cap A_i)=\lambda_3(C_{x_0}^-\cap A_i)\forall i$. This means that $H_{x_0}$ splits $A_i$ into two equal parts $\forall i$, as required.
+
+\includegraphics[scale=0.5]{Screenshot (2078).png}
+\end{proof}
+
+\begin{exercise}
+From the isomorphism $\pi_1(X\times Y,(x_0,y_0))\cong \pi_1(X,x_0)\times\pi_1(Y,y_0)$ it follows that loops in $X\times\{y_0\}$ and $\{x_0\}\times Y$ represent commuting elements of $\pi_1(X\times Y,(x_0,y_0))$. Construct an explicit homotopy demonstrating this.
+\end{exercise}
+
 \end{document}
