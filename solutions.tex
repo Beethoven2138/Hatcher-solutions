@@ -577,5 +577,20 @@ Let $\lambda_3:\mathcal{B}_3\to\mathbb{R}$ be the three-dimensional Lebesgue mea
 \begin{exercise}
 From the isomorphism $\pi_1(X\times Y,(x_0,y_0))\cong \pi_1(X,x_0)\times\pi_1(Y,y_0)$ it follows that loops in $X\times\{y_0\}$ and $\{x_0\}\times Y$ represent commuting elements of $\pi_1(X\times Y,(x_0,y_0))$. Construct an explicit homotopy demonstrating this.
 \end{exercise}
+\begin{proof}
+Let $\alpha:I\to X\times\{y_0\}:t\mapsto(\alpha_X(t),y_0)$ and $\beta:I\to \{x_0\}\times Y:t\mapsto(x_0,\beta_Y(t))$ be loops, where $\alpha_X$ and $\beta_Y$ are loops in $X$ and $Y$ respectively. Then $\alpha\cdot\beta:I\to X\times Y$ is given by \[\alpha\cdot\beta(t)=\begin{cases}
+    (\alpha_X(2t),y_0)&\text{if }t\in[0,\frac{1}{2}],\\(x_0,\beta_Y(2t-1))&\text{if }t\in[\frac{1}{2},1].
+\end{cases}\]
+and $\beta\cdot\alpha:I\to X\times Y$ is given by \[\beta\cdot\alpha(t)=\begin{cases}
+    (x_0,\beta_Y(2t))&\text{if }t\in[0,\frac{1}{2}],\\(\alpha_X(2t-1),y_0)&\text{if }t\in[\frac{1}{2},1].
+\end{cases}\] Define $F:I\times I\to X$ by \[F(s,t)=\begin{cases}
+    \alpha_X(2(t-\frac{s}{2}))&\text{if }t\in[\frac{s}{2},\frac{s+1}{2}],\\
+    x_0&\text{otherwise}.
+\end{cases}\]and $G:I\times I\to Y$ by\[G(s,t)=\begin{cases}
+    \beta_Y(2(t-\frac{1-s}{2}))&\text{if }t\in[\frac{1}{2}-\frac{s}{2},1-\frac{s}{2}],\\
+    y_0&\text{otherwise}.
+\end{cases}\]
 
+We can then define $H:I\times I\to X\times Y:(s,t)\mapsto(F(s,t),G(s,t))$, which is a based-homotopy from $\alpha\cdot\beta$ to $\beta\cdot\alpha$.
+\end{proof}
 \end{document}
