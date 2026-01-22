@@ -604,4 +604,11 @@ Let $\rho:I\to X$ be a loop with base-point $x_0$ so that $[\rho]\in\pi_1(X,x_0)
 
 Now let $\alpha,\beta:I\to X$ be based-homotopic loops based at $x_0$. As before, we have $\alpha=\iota\circ\alpha_{X_0}$, where $\alpha_{X_0}$ is given by $\alpha_{X_0}:I\to X_0:t\mapsto \alpha(t)$, and similarly $\beta=\iota\circ\beta_{X_0}$. Since any based-homotopy from $\alpha$ to $\beta$ will have an image lying entirely inside $X_0$, it follows that any such homotopy can have its image restricted to $X_0$, thereby becoming a based-homotopy from $\alpha_{X_0}$ to $\beta_{X_0}$, as required. hence $\iota_*$ is also injective, and so is an isomorphism.
 \end{proof}
+
+\begin{exercise}
+Show that every homomorphism $\pi_1(S^1)\to\pi_1(S^1)$ can be realized as the induced homomorphism $\phi_*$ of a map $\phi:S^1\to S^1$.
+\end{exercise}
+\begin{proof}
+Let $\Phi:\pi_1(S^1,s_0)\to\pi_1(S^1,s_1)$ be the homomorphism. Define $\gamma_n:I\to S_1:t\mapsto e^{2\pi int}s_0$ and $\rho_n:I\to S_1:t\mapsto e^{2\pi int}s_1$. Then $\pi_1(S^1,s_0)=\{[\gamma_n]:n\in\mathbb{Z}\}$ and $\pi_1(S^1,s_1)=\{[\rho_n]:n\in\mathbb{Z}\}$.  Let $m$ be such that $\Phi([\gamma_1])=[\rho_m]$. Furthermore, let $\theta$ be the angle between $(s_0)^m$ and $s_1$, so that $s_1=e^{i\theta}(s_0)^m$. Then define $\phi$ by $\phi:S^1\to S^1:\omega\mapsto e^{i\theta}(\omega)^m$. We then have \[\phi\circ\gamma_n(t)=e^{i\theta}(e^{2\pi i nt}s_0)^m=e^{2\pi i mnt}s_1=\rho_{mn}(t)\forall t,n.\] Hence \[\phi_*([\gamma_n])=[\phi\circ\gamma_n]=[\rho_{mn}]=\Phi([\gamma_n])\forall n,\] and hence $\Phi=\phi_*$.
+\end{proof}
 \end{document}
