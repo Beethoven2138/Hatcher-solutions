@@ -593,4 +593,15 @@ and $\beta\cdot\alpha:I\to X\times Y$ is given by \[\beta\cdot\alpha(t)=\begin{c
 
 We can then define $H:I\times I\to X\times Y:(s,t)\mapsto(F(s,t),G(s,t))$, which is a based-homotopy from $\alpha\cdot\beta$ to $\beta\cdot\alpha$.
 \end{proof}
+
+\begin{exercise}
+If $X_0$ is the path-component of a space $X$ containing the basepoint $x_0$, show that the inclusion $X_0\hookrightarrow X$ induces an isomorphism $\pi_1(X_0,x_0)\to\pi_1(X,x_0)$.
+\end{exercise}
+\begin{proof}
+Let $\iota_*:\pi_1(X_0,x_0)\to\pi_1(X,x_0):[\gamma]\mapsto[\iota\circ\gamma]$ be the push-forward homomorphism of the inclusion map.
+
+Let $\rho:I\to X$ be a loop with base-point $x_0$ so that $[\rho]\in\pi_1(X,x_0)$. Since $X_0$ is the path-component containing $x_0$, it follows that the image of $\rho$ is contained in $X_0$. Hence, we have $\rho=\iota\circ\kappa$, where $\kappa$ is defined as $\kappa:I\to X_0:t\mapsto \rho(t)$, and hence $[\rho]=[\iota\circ\kappa]=\iota_*([\kappa])\in\iota_*(\pi_1(X_0,x_0))$. Hence $\iota_*$ is surjective.
+
+Now let $\alpha,\beta:I\to X$ be based-homotopic loops based at $x_0$. As before, we have $\alpha=\iota\circ\alpha_{X_0}$, where $\alpha_{X_0}$ is given by $\alpha_{X_0}:I\to X_0:t\mapsto \alpha(t)$, and similarly $\beta=\iota\circ\beta_{X_0}$. Since any based-homotopy from $\alpha$ to $\beta$ will have an image lying entirely inside $X_0$, it follows that any such homotopy can have its image restricted to $X_0$, thereby becoming a based-homotopy from $\alpha_{X_0}$ to $\beta_{X_0}$, as required. hence $\iota_*$ is also injective, and so is an isomorphism.
+\end{proof}
 \end{document}
