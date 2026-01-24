@@ -602,7 +602,7 @@ Let $\iota_*:\pi_1(X_0,x_0)\to\pi_1(X,x_0):[\gamma]\mapsto[\iota\circ\gamma]$ be
 
 Let $\rho:I\to X$ be a loop with base-point $x_0$ so that $[\rho]\in\pi_1(X,x_0)$. Since $X_0$ is the path-component containing $x_0$, it follows that the image of $\rho$ is contained in $X_0$. Hence, we have $\rho=\iota\circ\kappa$, where $\kappa$ is defined as $\kappa:I\to X_0:t\mapsto \rho(t)$, and hence $[\rho]=[\iota\circ\kappa]=\iota_*([\kappa])\in\iota_*(\pi_1(X_0,x_0))$. Hence $\iota_*$ is surjective.
 
-Now let $\alpha,\beta:I\to X$ be based-homotopic loops based at $x_0$. As before, we have $\alpha=\iota\circ\alpha_{X_0}$, where $\alpha_{X_0}$ is given by $\alpha_{X_0}:I\to X_0:t\mapsto \alpha(t)$, and similarly $\beta=\iota\circ\beta_{X_0}$. Since any based-homotopy from $\alpha$ to $\beta$ will have an image lying entirely inside $X_0$, it follows that any such homotopy can have its image restricted to $X_0$, thereby becoming a based-homotopy from $\alpha_{X_0}$ to $\beta_{X_0}$, as required. hence $\iota_*$ is also injective, and so is an isomorphism.
+Now let $\alpha,\beta:I\to X$ be based-homotopic loops based at $x_0$. As before, we have $\alpha=\iota\circ\alpha_{X_0}$, where $\alpha_{X_0}$ is given by $\alpha_{X_0}:I\to X_0:t\mapsto \alpha(t)$, and similarly $\beta=\iota\circ\beta_{X_0}$. Since any based-homotopy from $\alpha$ to $\beta$ will have an image lying entirely inside $X_0$, it follows that any such homotopy can have its image restricted to $X_0$, thereby becoming a based-homotopy from $\alpha_{X_0}$ to $\beta_{X_0}$, as required. Hence $\iota_*$ is also injective, and so is an isomorphism.
 \end{proof}
 
 \begin{exercise}
@@ -610,5 +610,14 @@ Show that every homomorphism $\pi_1(S^1)\to\pi_1(S^1)$ can be realized as the in
 \end{exercise}
 \begin{proof}
 Let $\Phi:\pi_1(S^1,s_0)\to\pi_1(S^1,s_1)$ be the homomorphism. Define $\gamma_n:I\to S_1:t\mapsto e^{2\pi int}s_0$ and $\rho_n:I\to S_1:t\mapsto e^{2\pi int}s_1$. Then $\pi_1(S^1,s_0)=\{[\gamma_n]:n\in\mathbb{Z}\}$ and $\pi_1(S^1,s_1)=\{[\rho_n]:n\in\mathbb{Z}\}$.  Let $m$ be such that $\Phi([\gamma_1])=[\rho_m]$. Furthermore, let $\theta$ be the angle between $(s_0)^m$ and $s_1$, so that $s_1=e^{i\theta}(s_0)^m$. Then define $\phi$ by $\phi:S^1\to S^1:\omega\mapsto e^{i\theta}(\omega)^m$. We then have \[\phi\circ\gamma_n(t)=e^{i\theta}(e^{2\pi i nt}s_0)^m=e^{2\pi i mnt}s_1=\rho_{mn}(t)\forall t,n.\] Hence \[\phi_*([\gamma_n])=[\phi\circ\gamma_n]=[\rho_{mn}]=\Phi([\gamma_n])\forall n,\] and hence $\Phi=\phi_*$.
+\end{proof}
+
+\begin{exercise}
+Given a space $X$ and a path-connected subspace $A$ containing the basepoint $x_0$, show that the map $\pi_1(A,x_0)\to\pi_1(X,x_0)$ induced by the inclusion $A\hookrightarrow X$ is surjective iff every path in $X$ with endpoints in $A$ is homotopic to a path in $A$.
+\end{exercise}
+\begin{proof}
+$(\implies)$ Suppose that $\iota_*:\pi_1(A,x_0)\to\pi_1(X,x_0)$ is surjective, meaning that every loop in $X$ with base-point $x_0$ is based-homotopic to a loop in $A$ with base-point $x_0$. Let $p:I\to X$ be a path in $X$ with endpoints in $A$. Let $a_0$ and $a_1$ be the start and end-points of $p$ respectively. Since $A$ is path-connected, there exists a path $q:I\to A$ from $a_1$ to $a_0$. $p\cdot q:I\to X$ is then a loop based at $a_0$. Furthermore, $\pi_1(A,x_0)\cong\pi_1(A,a_0)$ and $\pi_1(X,x_0)\cong\pi_1(X,a_0)$, and so by surjectivity of $\iota_*$, there exists a loop $r:I\to A$ such that $p\cdot q\sim r$. Hence, $p\sim p\cdot q\cdot \overline{q}\sim r\cdot\overline{q}$, with $r\cdot\overline{q}$ being a path in $A$ from $a_0$ to $a_1$, as required.
+
+$(\impliedby)$ Let $p:I\to X$ be a loop based at $x_0$. There then exists a loop $q:I\to A$ such that $q\sim p$; ie, $\iota_*([q])=[p]$. Hence, $\iota_*$ is surjective.
 \end{proof}
 \end{document}
