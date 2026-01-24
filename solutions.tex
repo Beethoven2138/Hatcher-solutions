@@ -620,4 +620,11 @@ $(\implies)$ Suppose that $\iota_*:\pi_1(A,x_0)\to\pi_1(X,x_0)$ is surjective, m
 
 $(\impliedby)$ Let $p:I\to X$ be a loop based at $x_0$. There then exists a loop $q:I\to A$ such that $q\sim p$; ie, $\iota_*([q])=[p]$. Hence, $\iota_*$ is surjective.
 \end{proof}
+
+\begin{exercise}
+Show that the isomorphism $\pi_1(X\times Y)\cong\pi_1(X)\times\pi_1(Y)$ in Proposition $1.12$ is given by $[f]\mapsto(p_{1*}([f]),p_{2*}([f]))$, where $p_1$ and $p_2$ are the projections of $X\times Y$ onto its two factors.
+\end{exercise}
+\begin{proof}
+The isomorphism presented in Proposition $1.12$ is $[f]\mapsto([g],[h])$, where $g$ and $h$ are such that $f(t)=(g(t),h(t))$. However, $g$ and $h$ are precisely $p_1\circ f$ and $p_2\circ f$ respectively, and hence the isomorphism can be written as $[f]\mapsto([p_1\circ f],[p_2\circ f])=(p_{1*}([f]),p_{2*}([f]))$, as required.
+\end{proof}
 \end{document}
