@@ -6,7 +6,7 @@
 \usepackage{enumitem} 
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{tikz}
+\usepackage{tikz-cd}
 \usetikzlibrary{matrix}
 \usepackage[english]{babel}
 \usepackage{mathtools}
@@ -626,5 +626,16 @@ Show that the isomorphism $\pi_1(X\times Y)\cong\pi_1(X)\times\pi_1(Y)$ in Propo
 \end{exercise}
 \begin{proof}
 The isomorphism presented in Proposition $1.12$ is $[f]\mapsto([g],[h])$, where $g$ and $h$ are such that $f(t)=(g(t),h(t))$. However, $g$ and $h$ are precisely $p_1\circ f$ and $p_2\circ f$ respectively, and hence the isomorphism can be written as $[f]\mapsto([p_1\circ f],[p_2\circ f])=(p_{1*}([f]),p_{2*}([f]))$, as required.
+\end{proof}
+\begin{exercise}
+Given a map $f:X\to Y$ and a path $h:I\to X$ from $x_0$ to $x_1$, show that $f_*\beta_h=\beta_{fh}f_*$ in the diagram at the right. \begin{tikzcd}
+\pi_1(X, x_1) \arrow[r, "\beta_h"] \arrow[d, "f_*"] & \pi_1(X, x_0) \arrow[d, "f_*"] \\
+\pi_1(Y, f(x_1)) \arrow[r, "\beta_{fh}"]           & \pi_1(Y, f(x_0))
+\end{tikzcd}
+\end{exercise}
+\begin{proof}
+Recall that $\beta_h:\pi_1(X,x_1)\to\pi_1(X,x_0)$ is the change-of-basepoint map given by \[\beta_h([\alpha])=[h\cdot \alpha\cdot \overline{h}].\] Let $p:I\to X$ be a loop based at $x_1$. We need to show that $f(h\cdot p\cdot\overline{h})\sim (f\circ h)\cdot f(p)\cdot(\overline{f\circ h})$. Indeed,\begin{align*}
+    f(h\cdot p\cdot\overline{h})&\sim f(h)\cdot f(p)\cdot f(\overline{h})\\&\sim(f\circ h)\cdot f(p)\cdot(f\circ\overline{h})\\&\sim(f\circ h)\cdot f(p)\cdot(\overline{f\circ h}).
+\end{align*}
 \end{proof}
 \end{document}
