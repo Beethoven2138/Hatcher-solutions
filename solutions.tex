@@ -672,4 +672,11 @@ Show that there are no retractions $r:X\to A$ in the following cases:
     $s$ then induces an isomorphism $s_*:\pi_1(X)\to\pi_1(C)$. Furthermore, we observe that $s\circ p$ is a loop which wraps around $C$ twice, and hence $s_*\circ \iota_*([p])=2x$, where $x$ is a generator of $\pi_1(C)$. Hence, since $s_*$ is a group isomorphism, $\iota_*([p])$ is neither $0$ nor a generator of $\pi_1(X)$, so is of the form $ky$, where $k$ is an integer greater than $1$  and $y$ is a generator of $\pi_1(X)$. However, we also have $r_*\circ\iota_*=\mathbf{1}_{\pi_1(A)}$, and hence $r_*(ky)=kr_*(y)=z$, where $z$ is a generator of $\pi_1(A)$. This is a contradiction, since a generator of a group isomorphic to $\mathbb{Z}$ is not $k$ times another element, where $k > 1$. Hence, $r$ cannot exist.
 \end{enumerate}
 \end{proof}
+
+\begin{exercise}
+Construct infinitely many nonhomotopic retractions $S^1\vee S^1\to S^1$.
+\end{exercise}
+\begin{proof}
+Let $A$ and $B$ be the two circles comprising the wedge sum, and let $x$ be their point of intersection. We define retractions $r_n:S^1\vee S^1\to S^1,n\in\mathbb{N}$ as follows: Let $r_{n|A}=\text{id}_A$. Then let $r_{n|B}$ be a loop in $A$ based at $x$ which wraps around $A$ exactly $n$ times. Each $r_n$ is continuous by the pasting lemma, and hence is a retraction. Furthermore, if we let $p:\mathbb{R}\to A$ be the covering map of $A$ and let $\overline{r}_n:I\to S^1$ be the corresponding loop, then the endpoint of the lift of $\overline{r}_n$ is $n$, and hence the $\overline{r}_n$'s are pairwise nonhomotopic. Hence, the $r_n$'s are also pairwise nonhomotopic, since otherwise a homotopy between different $r_n$'s woudl induce a homotopy between the corresponding $\overline{r}_n$'s.
+\end{proof}
 \end{document}
