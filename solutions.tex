@@ -638,4 +638,38 @@ Recall that $\beta_h:\pi_1(X,x_1)\to\pi_1(X,x_0)$ is the change-of-basepoint map
     f(h\cdot p\cdot\overline{h})&\sim f(h)\cdot f(p)\cdot f(\overline{h})\\&\sim(f\circ h)\cdot f(p)\cdot(f\circ\overline{h})\\&\sim(f\circ h)\cdot f(p)\cdot(\overline{f\circ h}).
 \end{align*}
 \end{proof}
+
+\begin{exercise}
+Show that there are no retractions $r:X\to A$ in the following cases:
+\begin{enumerate}
+    \item[(a)] $X=\mathbb{R}^3$ with $A$ any subspace homeomorphic to $S^1$.
+    \item[(b)] $X=S^1\times D^2$ with $A$ its boundary torus $S^1\times S^1$.
+    \item[(c)] $X=S^1\times D^2$ and $A$ the circle shown in the figure.
+    \item[(d)] $X=D^2\vee D^2$ with $A$ its boundary $S^1\vee S^1$.
+    \item[(e)] $X$ a disk with two points on its boundary identified and $A$ its boundary $S^1\vee S^1$.
+    \item[(f)] $X$ the Mobius band and $A$ its boundary circle.
+\end{enumerate}
+\includegraphics[scale=0.5]{Screenshot 2026-01-24 at 01-55-18 AT.dvi - AT.pdf.png}
+\end{exercise}
+\begin{proof}
+\begin{enumerate}
+    \item[(a)] Suppose there exists a retraction $r:\mathbb{R}^3\to A$. Then by proposition $1.17$, the push forward of the inclusion map, $\iota_*:\pi_1(A,x_0)\to\pi_1(\mathbb{R}^3,x_0)$ is injective for any $x_0\in A$. However, $\pi_1(A,x_0)\cong\mathbb{Z}$, while $\pi_1(\mathbb{R}^3,x_0)=0$, so $\iota_*$ cannot be injective; a contradiction. hence there is no retraction $r:\mathbb{R}^3\to A$.
+    \item[(b)] Suppose there exists a retraction $r:S^1\times D^2\to S^1\times S^1$. Then $\iota_*:\pi_1(S^1\times S^1)\to\pi_1(S^1\times D^2)$ is injective. However, we note that \[\pi_1(S^2\times D^2)\cong\pi_1(S^2)\times\pi_1(D^2)\cong0\times 0,\] while \[\pi_1(S^1\times S^1)\cong\pi_1(S^1)\times\pi_1(S^1)\cong\mathbb{Z}^2.\] Hence, as before, it is not possible for $\iota_*$ to be injective.
+    \item[(c)] If there were a retraction, then the kernel of $\iota_*:A\to S^1\times D^2$ would be trivial. However, consider the loop which generates $\pi_1(A)$ by traversing $A$ once. By inspection, it is clear that such a loop is null-homotopic in $X$, contradicting the triviality of $\iota_*$. Hence, there is no retraction $X\to A$.
+    \item[(d)] $X$ can be given a cell complex structure by beginning with a $0$-cell $e_1^0$, then attaching two $1$-cells to it, and then attaching two $2$-cells to the $1$-cells, as shown in the picture. The subcomplexes formed by $e_1^0\cup e_1^1\cup e_1^2$ and $e_1^0\cup e_2^1\cup e_2^2$ are contractible, and hence $X$ is homotopy equivalent to the space formed by collapsing both subcomplexes, which is a singleton set, implying that $X$ is simply-connected.
+    
+    \includegraphics[scale=0.5]{Screenshot (2083).png}
+    
+    However, $S^1\vee S^1$ is clearly not simply-connected, and hence $\iota_*:\pi_1(S^1\vee S^1)\to\pi_1(D^2\vee D^2)$ cannot be injective, meaning that there cannot be a retraction.
+    \item[(e)] $X$ is homotopy equivalent to the drawing shown, since the subcomplex $e_1^0\cup e_2^0\cup e_3^1$ can be collapsed to give a space homeomorphic to $X$. On the other hand, if we instead collapse $e_1^0\cup e_2^0\cup e_1^1\cup e_2^1\cup e_1^2$, then we obtain a space homeomorphic to $S^1$, and hence $\pi_1(X)\cong\mathbb{Z}$.
+
+    \includegraphics[scale=0.5]{Screenshot (2087).png}
+
+    Now consider a loop $p:I\to S^1\vee S^1$ in $S^1\vee S^1$ which starts at $e_2^0$, then goes along $e_1^1$, and then reaches $e_1^0$, which is identified with $e_2^0$. This loop represents a non-trivial element of $\pi_1(S^1\vee S^1)$. However, clearly $\iota_*([p])=0$, and hence $\iota_*$ has a non-trivial kernel, so is not injective. Hence $S^1\vee S^1$ is not a retract of $X$.
+    \item[(f)] Both the Mobius band and its boundary circle have fundamental groups isomorphic to $\mathbb{Z}$. Let $p:I\to A$ be the loop given by beginning at the orange point, then traversing along the blue line to $e_2^0=e_4^0$, and then traversing along the blue line to $e_3^0=e_1^0$, and finally traversing along the blue line to the orange point. $p$ is then a representative of a generator of $\pi_1(A)$. Let $C$ be the centre-circle of $X$, which we note is a deformation retract of $X$. Let $s:X\to C$ be a deformation retraction given by projecting a point on $X$ orthogonally onto $C$.
+    \includegraphics[scale=0.4]{Screenshot (2088).png}
+    
+    $s$ then induces an isomorphism $s_*:\pi_1(X)\to\pi_1(C)$. Furthermore, we observe that $s\circ p$ is a loop which wraps around $C$ twice, and hence $s_*\circ \iota_*([p])=2x$, where $x$ is a generator of $\pi_1(C)$. Hence, since $s_*$ is a group isomorphism, $\iota_*([p])$ is neither $0$ nor a generator of $\pi_1(X)$, so is of the form $ky$, where $k$ is an integer greater than $1$  and $y$ is a generator of $\pi_1(X)$. However, we also have $r_*\circ\iota_*=\mathbf{1}_{\pi_1(A)}$, and hence $r_*(ky)=kr_*(y)=z$, where $z$ is a generator of $\pi_1(A)$. This is a contradiction, since a generator of a group isomorphic to $\mathbb{Z}$ is not $k$ times another element, where $k > 1$. Hence, $r$ cannot exist.
+\end{enumerate}
+\end{proof}
 \end{document}
