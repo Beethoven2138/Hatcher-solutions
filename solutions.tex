@@ -697,4 +697,11 @@ Show that if $X$ is a path-connected $1$-dimensional CW complex with basepoint $
 \begin{proof}
 Let $p:I\to X$ be a loop based at $x_0$. Let $t_1,\dots,t_n$, written in increasing order, be the times at which $p$ hits a $0$-cell after fully traversing the closure of a $1$-cell, and let $t_0:=0 $. For any $t_i$, if we have another time $s\in(t_i,t_{i+1})$ such that $p(s)$ is a $0$-cell, then $p_{|[t_i,s]}$ is a loop on a contractible space, and hence is homotopic to the constant map. The same holds for $p_{|[t_n,1]}$, if applicable. Let $q:I\to X$ be the loop given by beginning with $p$, and homotoping each segment of $p$ like $p_{|[t_i,s]}$ to a constant map, so that $p\sim q$. Then $q$ is a product $a_0\cdots a_n$ of paths, where the image of each $a_i$ is the closure of a single $1$-cell. Each $a_i$ is then homotopic to a map $b_i$ which traverses along the $1$-cell at constant speed, by the linear homotopy. Hence, $p\sim b_0\cdots b_n$, as required.
 \end{proof}
+
+\begin{exercise}
+Suppose $f_t:X\to X$ is a homotopy such that $f_0$ and $f_1$ are each the identity map. Use Lemma $1.19$ to show that for any $x_0\in X$, the loop $f_t(x_0)$ represents an element of the center of $\pi_1(X,x_0)$. [One can interpret the result as saying that a loop represents an element of the center of $\pi_1(X)$ if it extends to a loop of maps $X\to X$.]
+\end{exercise}
+\begin{proof}
+Let $x_0\in X$. Let $g_\#:\pi_1(X,x_0)\to\pi_1(X,x_0)$ be the change-of-basepoint isomorphism induced by the loop $f_t(x_0)$. It then follows from Lemma $1.19$ that $g_\#$ is the identity map, meaning that \[[f_t(x_0)]\cdot [p]\cdot[f_t(x_0)]^{-1}=[p]\forall[p]\in\pi_1(X,x_0),\] implying that $[f_t(x_0)]\in Z(\pi_1(X,x_0))$.
+\end{proof}
 \end{document}
