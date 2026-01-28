@@ -708,4 +708,22 @@ Let $x_0\in X$. Let $g_\#:\pi_1(X,x_0)\to\pi_1(X,x_0)$ be the change-of-basepoin
 
 \subsection{Van Kampen's Theorem}
 
+\begin{exercise}
+Show that the free product $G*H$ of nontrivial groups $G$ and $H$ has trivial center, and that the only elements of $G*H$ of finite order are the conjugates of finite-order elements of $G$ and $H$.
+\end{exercise}
+\begin{proof}
+Suppose for a contradiction that $G*H$ has non-trivial center. Let $z\in Z(G*H)$ be a reduced word of length $m > 0$. Then let $g\in G\setminus\{e_G\}$, and let $h\in H\setminus\{e_H\}$. We then check the following cases:
+\begin{enumerate}
+    \item If $z$ begins and ends with an element of $G$, then $h^{-1}zh$ will be a reduced word of length $m+2$, making $h^{-1}zh=z$ impossible.
+    \item If $z$ begins and ends with an element of $H$, then this is impossible for analogous reasons.
+    \item If $z$ begins with an element of $G$ and ends with an element of $H$, then either $g^{-1}zg$ begins with an element of $G$ after getting reduced, in which case $g^{-1}zg$ will have length $m+1$ whereas $z$ will have length $m$, or $g^{-1}zg$ will begin with an element of $H$ after reduction, and so cannot be the same word as $z$.
+    \item If $z$ begins with an element of $H$ and ends with an element of $G$, then this is impossible for analogous reasons.
+\end{enumerate}
+Hence, $Z(G*H)$ must be trivial.
+
+Let $z\in G*H$ be of the form $a^{-1}ga$, where $a\in G*H$ and $g\in G$, where $g$ has finite order $n$. We then have \[(a^{-1}ga)^n=\overset{n\text{ times}}{(a^{-1}ga)\cdots (a^{-1}ga)}=a^{-1}g(aa^{-1})g(aa^{-1})\cdots ga=a^{-1}g^na=e,\] and hence all the conjugates of finite-order elements of $G$ have finite order. Similarly, all conjugates of finite-order elements of $H$ have finite order.
+
+We now prove that these are the only elements of finite order. Let $z\in G*H$ be an element of finite order. That is, $\exists n\in\mathbb{N}$ such that $z^n$ is the empty word. Let $z=a_1\cdots a_m$ be in reduced form, where the $a_i$'s are letters. In order for $z^n=e$, we need for $a_i=a_{m-i+1}^{-1}\forall i \leq\frac{m}{2}$. If $m$ is even, this then means that $z$ is the empty word, which is the conjugate of $e_G$ with any element of $G*H$. If $m$ is odd, $z$ is then of the form $a^{-1}ba$, where $a\in G*H$ and $b$ is a letter such that $b^n$ is the empty-word, implying that $b$ is an element of $G$ or $H$ of finite order.
+\end{proof}
+
 \end{document}
