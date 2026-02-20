@@ -825,6 +825,22 @@ First let $X=S^1\vee S^1$. We can view $T_f$ as a cell complex by beginning with
 \end{proof}
 
 
+\begin{exercise}
+Consider the quotient space of a cube $I^3$ obtained by identifying each square face with the opposite square face via the right-handed screw motion consisting of a translation by one unit in the direction perpendicular to the face combined with a one-quarter twist of the face about its center point. Show this quotient space $X$ is a cell complex with two $0$-cells, four $1$-cells, three $2$-cells, and one $3$-cell. Using this structure, show that $\pi_1(X)$ is the quaternion group $\{\pm1,\pm i,\pm j,\pm k\}$, of order eight.
+\end{exercise}
+\begin{proof}
+The diagram below shows the identifications made to $I_3$ to give $X$. From the diagram, we see that there are two $0$-cells (the orange and burgundy crosses), four $1$-cells (the yellow, cyan, burgundy and orange circles), three $2$-cells (the green, red and burgundy arrows), and one $3$-cell (the interior of the cube).
+
+\includegraphics[scale=0.25]{Screenshot (2269).png}
+
+\noindent The $1$-skeleton of $X$ appears as in the diagram below on the left. 
+
+\includegraphics[scale=0.4]{Screenshot (2271).png}
+
+\noindent Since the subcomplex spanned by the loop $a$ is contractible, the space is then homotopy equivalent to the space on the right, which is the wedge sum of $3$ circles. Hence $\pi_1(X^1)$ is a free group of rank $3$. Let $q$ be the quotient map. $q$ is then a homotopy equivalence, and so induces an isomorphism $q_*:\pi_1(X^1)\to\pi_1(S^1\vee S^1\vee S^1)$, whose inverse in particular maps generating sets to generating sets. $\{q_*([ab]),q_*([ac^{-1}]),q_*([ad])\}$ is a generating set of $\pi_1(S^1\vee S^1\vee S^1)$, and hence $\{[ab],[ac^{-1}],[ad]\}$ is a generating set of $\pi_1(X^1)$. To obtain $X^2$, we attach the three $2$-cells by the attaching maps $abcd,adb^{-1}c^{-1}$ and $ac^{-1}d^{-1}b$. So if we let $i:=[ab],j:=[ac^{-1}],k:=[ad]$, by Proposition $1.26$, we have that \[\pi_1(X)\cong\langle i,j,k\mid ij^{-1}k,ki^{-1}j,jk^{-1}i\rangle=\langle i,j,k\mid i=jk,j=ki,k=ij\rangle.\] This is a presentation of the quaternion group $Q_8$, as required.
+
+\end{proof}
+
 
 
 \begin{exercise}
@@ -835,9 +851,7 @@ Let $X$ be the subspace, and let $A_n$ be the sphere of radius $1/n$. Then let $
     R_1(s,t)&\text{if }p(t)\in A_1,\\p(t)&\text{if }p(t)\in\bigcup_{i=2}^\infty A_i
 \end{cases}\]and\[H_n(s,t)=\begin{cases}
     H_{n-1}(1-\frac{1}{n+1},t)&\text{if }p(t)\in \bigcup_{i=1}^{n-1} A_i,\\R_n(s,t)&\text{if }p(t)\in A_n,\\p(t)&\text{if }p(t)\in\bigcup_{i=n+1}^\infty A_i
-\end{cases}\]if $n>1$. $H_1$ is well-defined, since both $p(t)$ and $R_1(s,t)$ are equal to $(0,0,0)$ on $p^{-1}(\{(0,0,0)\})=A_n\cap(\bigcup_{i=2}^\infty A_i)$. And $H_n$ is well-defined $\forall n>1$, since the intersection of any pairs of $\bigcup_{i=1}^{n-1}A_i,A_n$ and $\bigcup_{i=n+1}^\infty A_i$ is $p^{-1}(\{(0,0,0\})$, and $H_{n-1}(1-\frac{1}{n+1},t),R_n(s,t)$ and $p(t)$ are all equal to $(0,0,0)$ on that set. Furthermore, both $A_1$ and $\bigcup_{i=2}^\infty A_i$ are closed, so $H_1$ is continuous by the pasting lemma, and $\bigcup_{i=1}^{n-1}A_i,A_n$ and $\bigcup_{i=n+1}^\infty A_i$ are closed, and hence $H_n$ is continuous by the pasting lemma for $n>1$.
-
-We then define $F:I\times I\to X$ by\[F(s,t)=\begin{cases}
+\end{cases}\]if $n>1$. $H_1$ is well-defined, since both $p(t)$ and $R_1(s,t)$ are equal to $(0,0,0)$ on $p^{-1}(\{(0,0,0)\})=A_n\cap(\bigcup_{i=2}^\infty A_i)$. And $H_n$ is well-defined $\forall n>1$, since the intersection of any pairs of $\bigcup_{i=1}^{n-1}A_i,A_n$ and $\bigcup_{i=n+1}^\infty A_i$ is $p^{-1}(\{(0,0,0\})$, and $H_{n-1}(1-\frac{1}{n+1},t),R_n(s,t)$ and $p(t)$ are all equal to $(0,0,0)$ on that set. Furthermore, both $A_1$ and $\bigcup_{i=2}^\infty A_i$ are closed, so $H_1$ is continuous by the pasting lemma, and $\bigcup_{i=1}^{n-1}A_i,A_n$ and $\bigcup_{i=n+1}^\infty A_i$ are closed, and hence $H_n$ is continuous by the pasting lemma for $n>1$. We then define $F:I\times I\to X$ by\[F(s,t)=\begin{cases}
     p(t)&\text{if }s\in[0,\frac{1}{2}],\\H_1(s,t)&\text{if }s\in[\frac{1}{2},\frac{2}{3}],\\H_2(s,t)&\text{if }s\in[\frac{2}{3},\frac{3}{4}],\\\vdots&\vdots\\H_n(s,t)&\text{if }s\in[1-\frac{1}{n+1},1-\frac{1}{n+2}],\\\vdots&\vdots
 \end{cases}\]This is continuous on $[0,1-\frac{1}{n+2}]\times I\forall n$ by the pasting lemma. Furthermore, $F(1,t)=(0,0,0)\forall t$, since if $p(t)\in A_n$ for some $n$, then $F(s,t)=(0,0,0)\forall s>\frac{1}{n+5}$. We now need to show that it is continuous on $\{1\}\times I$. Indeed, let $t\in I$ and let $\epsilon > 0$. Let $n\in\mathbb{N}$ be such that $\frac{2}{n}<\epsilon$. Then for all $(s',t')\in B_{\frac{1}{n+3}}((1,t))\cap (I\times I)$, we have \[F(s',t')\in\bigcup_{i=n+1}^\infty A_i\subseteq B_{\frac2{n+1}}((0,0,0))\subseteq B_{\epsilon}((0,0,0)),\] as required. We then have a based homotopy from $p$ to $\gamma_{(0,0,0)}$. Since $p$ is arbitrary, it follows that $X$ is simply-connected.
 \end{proof}
