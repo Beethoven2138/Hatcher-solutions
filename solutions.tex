@@ -827,7 +827,7 @@ First let $X=S^1\vee S^1$. We can view $T_f$ as a cell complex by beginning with
 Consider the quotient space of a cube $I^3$ obtained by identifying each square face with the opposite square face via the right-handed screw motion consisting of a translation by one unit in the direction perpendicular to the face combined with a one-quarter twist of the face about its center point. Show this quotient space $X$ is a cell complex with two $0$-cells, four $1$-cells, three $2$-cells, and one $3$-cell. Using this structure, show that $\pi_1(X)$ is the quaternion group $\{\pm1,\pm i,\pm j,\pm k\}$, of order eight.
 \end{exercise}
 \begin{proof}
-The diagram below shows the identifications made to $I_3$ to give $X$. From the diagram, we see that there are two $0$-cells (the orange and burgundy crosses), four $1$-cells (the yellow, cyan, burgundy and orange circles), three $2$-cells (the green, red and burgundy arrows), and one $3$-cell (the interior of the cube).
+The diagram below shows the identifications made to $I^3$ to give $X$. From the diagram, we see that there are two $0$-cells (the orange and burgundy crosses), four $1$-cells (the yellow, cyan, burgundy and orange circles), three $2$-cells (the green, red and burgundy arrows), and one $3$-cell (the interior of the cube).
 
 \includegraphics[scale=0.25]{Screenshot (2269).png}
 
@@ -852,4 +852,20 @@ Let $X$ be the subspace, and let $A_n$ be the sphere of radius $1/n$. Then let $
     p(t)&\text{if }s\in[0,\frac{1}{2}],\\H_1(s,t)&\text{if }s\in[\frac{1}{2},\frac{2}{3}],\\H_2(s,t)&\text{if }s\in[\frac{2}{3},\frac{3}{4}],\\\vdots&\vdots\\H_n(s,t)&\text{if }s\in[1-\frac{1}{n+1},1-\frac{1}{n+2}],\\\vdots&\vdots
 \end{cases}\]This is continuous on $[0,1-\frac{1}{n+2}]\times I\forall n$ by the pasting lemma. Furthermore, $F(1,t)=(0,0,0)\forall t$, since if $p(t)\in A_n$ for some $n$, then $F(s,t)=(0,0,0)\forall s>\frac{1}{n+5}$. We now need to show that it is continuous on $\{1\}\times I$. Indeed, let $t\in I$ and let $\epsilon > 0$. Let $n\in\mathbb{N}$ be such that $\frac{2}{n}<\epsilon$. Then for all $(s',t')\in B_{\frac{1}{n+3}}((1,t))\cap (I\times I)$, we have \[F(s',t')\in\bigcup_{i=n+1}^\infty A_i\subseteq B_{\frac2{n+1}}((0,0,0))\subseteq B_{\epsilon}((0,0,0)),\] as required. We then have a based homotopy from $p$ to $\gamma_{(0,0,0)}$. Since $p$ is arbitrary, it follows that $X$ is simply-connected.
 \end{proof}
+
+\begin{exercise}
+Let $X$ be the subspace of $\mathbb{R}^2$ that is the union of the circles $C_n$ of radius $n$ and center $(n,0)$ for $n=1,2,\dots$. Show that $\pi_1(X)$ is the free group $*_n\pi_1(C_n)$, the same as for the infinite wedge sum $\bigvee_\infty S^1$. Show that $X$ and $\bigvee_\infty S^1$ are in fact homotopy equivalent, but not homeomorphic.
+\end{exercise}
+\begin{proof}
+\includegraphics[scale=0.3]{Screenshot (2273).png}
+
+\noindent Let $B_{\epsilon_n,n}\subseteq\mathbb{R}^2$ be an $\epsilon_n$-neighbourhood of $C_n$. For sufficiently small $\epsilon_n$, $C_n$ is the only circle in $X$ fully contained in $B_{\epsilon_n,n}$. Let $A_n=B_{\epsilon_n,n}\cap X\forall n$. Then $A_n$ is open, path-connected, and deformation retracts to $C_n$, and so in particular has fundamental group isomorphic to $\mathbb
+{Z}$. Furthermore, each $A_n$ contains the basepoint $(0,0)$, and the intersection of any $A_i\cap A_j\cap A_k$ is path-connected. Furthermore, $A_i\cap A_j$ is simply-connected for $i\neq j$, since the only complete circle contained in $A_i$ is $C_i$, which is not contained in $A_j$, and ditto for $A_j$. Hence, the Van Kampen theorem applies to give \[\pi_1(X)\cong *_{i=1}^\infty\pi_1(A_i)/\{0\}\cong *_{i=1}^\infty\mathbb{Z},\] as required.
+\end{proof}
+
+
+\begin{exercise}
+Show that the join $X*Y$ of two nonempty spaces $X$ and $Y$ is simply-connected if $X$ is path-connected.
+\end{exercise}
+
 \end{document}
