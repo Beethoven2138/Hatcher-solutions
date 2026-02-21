@@ -823,8 +823,6 @@ The mapping torus $T_f$ of a map $f:X\to X$ is the quotient of $X\times I$ obtai
 First let $X=S^1\vee S^1$. We can view $T_f$ as a cell complex by beginning with the $1$-skeleton shown below, and attaching a two $2$-cells by the attaching maps $\phi_0=acx^{-1}c^{-1}$ and $\phi_1=bcy^{-1}c^{-1}$. To obtain $T_f$, we then perform the identification $(x,0)\sim(f(x),1)\forall x\in X$, which results in $f_*(a)=x$ and $f_*(b)=y$. Hence, we can view $T_f$ as $S^1\vee S^1\vee S^1$, with the attaching maps $\psi_1=acf_*(a)^{-1}c^{-1}$ and $\psi_2=bcf_*(b)^{-1}c^{-1}$. Hence, $\pi_1(T_f)\cong\langle a,b,c\mid c^{-1}ac=f_*(a),c^{-1}bc=f_*(b)\rangle$.
 \includegraphics[scale=0.3]{Screenshot (2255).png} 
 \end{proof}
-
-
 \begin{exercise}
 Consider the quotient space of a cube $I^3$ obtained by identifying each square face with the opposite square face via the right-handed screw motion consisting of a translation by one unit in the direction perpendicular to the face combined with a one-quarter twist of the face about its center point. Show this quotient space $X$ is a cell complex with two $0$-cells, four $1$-cells, three $2$-cells, and one $3$-cell. Using this structure, show that $\pi_1(X)$ is the quaternion group $\{\pm1,\pm i,\pm j,\pm k\}$, of order eight.
 \end{exercise}
@@ -837,8 +835,7 @@ The diagram below shows the identifications made to $I_3$ to give $X$. From the 
 
 \includegraphics[scale=0.4]{Screenshot (2271).png}
 
-\noindent Since the subcomplex spanned by the loop $a$ is contractible, the space is then homotopy equivalent to the space on the right, which is the wedge sum of $3$ circles. Hence $\pi_1(X^1)$ is a free group of rank $3$. Let $q$ be the quotient map. $q$ is then a homotopy equivalence, and so induces an isomorphism $q_*:\pi_1(X^1)\to\pi_1(S^1\vee S^1\vee S^1)$, whose inverse in particular maps generating sets to generating sets. $\{q_*([ab]),q_*([ac^{-1}]),q_*([ad])\}$ is a generating set of $\pi_1(S^1\vee S^1\vee S^1)$, and hence $\{[ab],[ac^{-1}],[ad]\}$ is a generating set of $\pi_1(X^1)$. To obtain $X^2$, we attach the three $2$-cells by the attaching maps $abcd,adb^{-1}c^{-1}$ and $ac^{-1}d^{-1}b$. So if we let $i:=[ab],j:=[ac^{-1}],k:=[ad]$, by Proposition $1.26$, we have that \[\pi_1(X)\cong\langle i,j,k\mid ij^{-1}k,ki^{-1}j,jk^{-1}i\rangle=\langle i,j,k\mid i=jk,j=ki,k=ij\rangle.\] This is a presentation of the quaternion group $Q_8$, as required.
-
+\noindent Since the subcomplex spanned by the path $a$ is contractible, the space is then homotopy equivalent to the space on the right, which is the wedge sum of $3$ circles. Hence $\pi_1(X^1)$ is a free group of rank $3$. Let $q$ be the quotient map. $q$ is then a homotopy equivalence, and so induces an isomorphism $q_*:\pi_1(X^1)\to\pi_1(S^1\vee S^1\vee S^1)$, whose inverse in particular maps generating sets to generating sets. $\{q_*([ab]),q_*([ac^{-1}]),q_*([ad])\}$ is a generating set of $\pi_1(S^1\vee S^1\vee S^1)$, and hence $\{[ab],[ac^{-1}],[ad]\}$ is a generating set of $\pi_1(X^1)$. To obtain $X^2$, we attach the three $2$-cells by the attaching maps $abcd,adb^{-1}c^{-1}$ and $ac^{-1}d^{-1}b$. So if we let $i:=[ab],j:=[ac^{-1}],k:=[ad]$, by Proposition $1.26$, we have that \[\pi_1(X)\cong\langle i,j,k\mid ij^{-1}k,ki^{-1}j,jk^{-1}i\rangle=\langle i,j,k\mid i=jk,j=ki,k=ij\rangle.\] This is a presentation of the quaternion group $Q_8$, as required.
 \end{proof}
 
 
