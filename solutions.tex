@@ -841,6 +841,18 @@ By Exercise $0.20$, we have that $X$ is homotopy equivalent to $S^1\vee S^1\vee 
 \noindent Finally, we observe that $Y$ is a deformation retract of $\mathbb{R}^3\setminus Z$, and hence $\pi_1(Z)\cong\pi_1(\mathbb{R}^3\setminus Z)$.
 \end{proof}
 \begin{exercise}
+The space $Y$ in the preceding exercise can be obtained from a disk with two holes by identifying its three boundary circles. There are only two essentially different ways of identifying the three boundary circles. Show that the other way yields a space $Z$ with $\pi_1(Z)$ not isomorphic to $\pi_1(Y)$. [Abelianize the fundamental groups to show they are not isomorphic.]
+\end{exercise}
+\begin{proof}
+We first note that $\pi_1(Y)^\text{ab}\cong \mathbb{Z}^2$, since $[aba^{-1}b^{-1}cb^\epsilon c^{-1}]=[b^\epsilon]=0\in\pi_1(Y)^\text{ab}$, and so $[b]=0$.
+
+\noindent Let $Z$ be the CW complex shown below
+
+\includegraphics[scale=0.4]{Screenshot (2286).png}
+
+\noindent Proposition $1.26$ then gives $\pi_1(Z)=\langle a,b,c\mid abab^{-1}cac^{-1}\rangle$, and hence $\pi_1(Z)^\text{ab}\cong \mathbb{Z}_3\times\mathbb{Z}^2$, which is clearly not isomorphic to $\pi_1(Y)^\text{ab}$. Hence, $\pi_1(Y)\not\cong\pi_1(Z)$.
+\end{proof}
+\begin{exercise}
 Consider the quotient space of a cube $I^3$ obtained by identifying each square face with the opposite square face via the right-handed screw motion consisting of a translation by one unit in the direction perpendicular to the face combined with a one-quarter twist of the face about its center point. Show this quotient space $X$ is a cell complex with two $0$-cells, four $1$-cells, three $2$-cells, and one $3$-cell. Using this structure, show that $\pi_1(X)$ is the quaternion group $\{\pm1,\pm i,\pm j,\pm k\}$, of order eight.
 \end{exercise}
 \begin{proof}
@@ -879,4 +891,6 @@ Let $X$ be the subspace of $\mathbb{R}^2$ that is the union of the circles $C_n$
 \noindent Let $B_{\epsilon_n,n}\subseteq\mathbb{R}^2$ be an $\epsilon_n$-neighbourhood of $C_n$. For sufficiently small $\epsilon_n$, $C_n$ is the only circle in $X$ fully contained in $B_{\epsilon_n,n}$. Let $A_n=B_{\epsilon_n,n}\cap X\forall n$. Then $A_n$ is open, path-connected, and deformation retracts to $C_n$, and so in particular has fundamental group isomorphic to $\mathbb
 {Z}$. Furthermore, each $A_n$ contains the basepoint $(0,0)$, and the intersection of any $A_i\cap A_j\cap A_k$ is path-connected. Furthermore, $A_i\cap A_j$ is simply-connected for $i\neq j$, since the only complete circle contained in $A_i$ is $C_i$, which is not contained in $A_j$, and ditto for $A_j$. Hence, the Van Kampen theorem applies to give \[\pi_1(X)\cong *_{i=1}^\infty\pi_1(A_i)/\{0\}\cong *_{i=1}^\infty\mathbb{Z},\] as required.
 \end{proof}
+
+\subsubsection{Covering Spaces}
 \end{document}
