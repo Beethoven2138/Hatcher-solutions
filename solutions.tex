@@ -165,7 +165,7 @@ Let $\sim_X$ be the equivalence relation on $X$ given by $a\sim_X b$ if and only
 
 Let $[x]_X$ be the path component of some point $x\in X$ and let $[f(x)]_Y$ be the path component in $Y$ of $f(x)$. $f$ then restricts to a map \[f_{|[x]_X}:[x]_X\to [f(x)]_Y.\] Furthermore, $g\circ f(x)\sim_X x$, and hence $g$ also restricts to a map \[g_{|[f(x)]_Y}:[f(x)]_Y\to[x]_X.\] We can then also restrict the homotopies $\phi_t$ and $\psi_t$ to \[\phi_{t|[f(x)]_Y}:[f(x)]_Y\to[f(x)]_Y\] and \[\psi_{t|[x]_X}:[x]_X\to[x]_X\] respectively, since $\forall x_0\in[x]_X$ we have $\psi_t(x_0)\sim_Xx_0\forall t$, and $\forall y_0\in[f(x)]_Y$ we have $\phi_t(y_0)\sim_Y y_0\forall t$. Hence $f_{|[x]_X}$ is a homotopy equivalence between $[x]_X$ and $[f(x)]_Y$.
 
-Now let $\sim_X$ and $\sim_Y$ be the corresponding relations for connected components.
+\noindent Now let $\sim_X$ and $\sim_Y$ be the corresponding relations for connected components.
 
 \textbf{We first show that $f$ induces a well-defined map on connected components.}
 Let $x_0\sim_X x_1$. Let $Z$ be a connected subspace containing $x_0$ and $x_1$. The image of a connected space is connected, and hence $f(x_0)\sim_Y f(x_1)$, as both are contained in $f(Z)$.
@@ -892,5 +892,5 @@ Let $X$ be the subspace of $\mathbb{R}^2$ that is the union of the circles $C_n$
 {Z}$. Furthermore, each $A_n$ contains the basepoint $(0,0)$, and the intersection of any $A_i\cap A_j\cap A_k$ is path-connected. Furthermore, $A_i\cap A_j$ is simply-connected for $i\neq j$, since the only complete circle contained in $A_i$ is $C_i$, which is not contained in $A_j$, and ditto for $A_j$. Hence, the Van Kampen theorem applies to give \[\pi_1(X)\cong *_{i=1}^\infty\pi_1(A_i)/\{0\}\cong *_{i=1}^\infty\mathbb{Z},\] as required.
 \end{proof}
 
-\subsubsection{Covering Spaces}
+\subsection{Covering Spaces}
 \end{document}
