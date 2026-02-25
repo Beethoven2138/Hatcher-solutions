@@ -891,6 +891,11 @@ Let $X$ be the subspace of $\mathbb{R}^2$ that is the union of the circles $C_n$
 \noindent Let $B_{\epsilon_n,n}\subseteq\mathbb{R}^2$ be an $\epsilon_n$-neighbourhood of $C_n$. For sufficiently small $\epsilon_n$, $C_n$ is the only circle in $X$ fully contained in $B_{\epsilon_n,n}$. Let $A_n=B_{\epsilon_n,n}\cap X\forall n$. Then $A_n$ is open, path-connected, and deformation retracts to $C_n$, and so in particular has fundamental group isomorphic to $\mathbb
 {Z}$. Furthermore, each $A_n$ contains the basepoint $(0,0)$, and the intersection of any $A_i\cap A_j\cap A_k$ is path-connected. Furthermore, $A_i\cap A_j$ is simply-connected for $i\neq j$, since the only complete circle contained in $A_i$ is $C_i$, which is not contained in $A_j$, and ditto for $A_j$. Hence, the Van Kampen theorem applies to give \[\pi_1(X)\cong *_{i=1}^\infty\pi_1(A_i)/\{0\}\cong *_{i=1}^\infty\mathbb{Z},\] as required.
 \end{proof}
-
 \subsection{Covering Spaces}
+\begin{exercise}
+For a covering space $p:\overset{\sim}{X}\to X$ and a subspace $A\subset X$, let $\overset{\sim}{A}=p^{-1}(A)$. Show that the restriction $p:\overset{\sim}{A}\to A$ is a covering space.
+\end{exercise}
+\begin{proof}
+Let $a\in A$. Then, since $a\in X$, there exists an open neighbourhood $U\subset X$ such that $p^{-1}(U)$ is a disjoint union of open sets $S_\alpha$ such that $p_{|S_\alpha}\to U$ is a homeomorphism $\forall\alpha$. We let $V:=U\cap A$, which is then open in $A$ by the subspace topology, while still containing $a$. Furthermore, \[p^{-1}(V)=p^{-1}(U\cap A)=p^{-1}(U)\cap p^{-1}(A)=\left(\bigsqcup_\alpha S_\alpha\right)\cap \overset{\sim}{A}=\bigsqcup_\alpha (S_\alpha\cap \overset{\sim}{A}).\]Finally, for any $\alpha$ we have an inverse $q_\alpha:U\to S_\alpha$ of $p_{|S_\alpha}$, so we consider $q_{\alpha|A}:A\to S_\alpha\cap\overset{\sim}{A}$. This is inverse to $p_{|S_\alpha\cap\overset{\sim}{A}}:S_\alpha\cap\overset{\sim}{A}\to A$, and hence $p_{|S_\alpha\cap\overset{\sim}{A}}$ is a homeomorphism from $S_\alpha\cap\overset{\sim}{A}$ to $V$. Hence, $p:\overset{\sim}{A}\to A$ is a covering space.
+\end{proof}
 \end{document}
