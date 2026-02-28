@@ -904,4 +904,16 @@ Show that if $p_1:\overset{\sim}{X_1}\to X_1$ and $p_2:\overset{\sim}{X_2}\to X_
 \begin{proof}
 Let $(x_1,x_2)\in X_1\times X_2$. Then there exists open sets $U_1\subseteq X_1$ and $U_2\subseteq X_2$ such that each $U_i$ contains $x_i$, and hence $(x_1,x_2)\in U_1\times U_2$. Furthermore, $U_1\times U_2$ is open, by the definition of the product topology. Additionally, we have $p_1^{-1}(U_1)=\bigsqcup_\alpha S_\alpha$ for open sets $S_\alpha$, each of which map homeomorphically onto $U_1$ by $p_1$, and $p_2^{-1}(U_2)=\bigsqcup_\beta T_\beta$ for open sets $T_\beta$, each of which map homeomorphically onto $U_2$ by $p_2$. Hence, \[(p_1\times p_2)^{-1}(U_1\times U_2)=p_1^{-1}(U_1)\times p_2^{-1}(U_2)=\bigsqcup_\alpha S_\alpha\times\bigsqcup_\beta T_\beta=\bigsqcup_{\alpha,\beta}S_\alpha\times T_\beta,\] where each $S_\alpha\times T_\beta$ is open by the product topology. Finally, for any $\alpha,\beta$, $(p_1\times p_2)_{|S_\alpha\times T_\beta}=p_{1|S_\alpha}\times p_{2|T_\beta}$ is a homeomorphism onto $U_1\times U_2$, being the product of two homeomorphisms. Hence, $p_1\times p_2:\overset{\sim}{X_1}\times\overset{\sim}{X_2}\to X_1\times X_2$ is a covering map.
 \end{proof}
+\begin{exercise}
+Let $p:\overset{\sim}{X}\to X$ be a covering space with $p^{-1}(x)$ finite and nonempty for all $x\in X$. Show that $\overset{\sim}{X}$ is compact Hausdorff iff $X$ is compact Hausdorff.
+\end{exercise}
+\begin{proof}
+$(\implies)$\textbf{We first prove that $X$ is compact.}
+
+\noindent Let $\bigcup_\alpha U_\alpha$ be an open cover of $X$. $\bigcup_\alpha p^{-1}(U_\alpha)$ is then an open cover of $\overset{\sim}{X}$, and hence, by compactness, there exists a finite subcover $p^{-1}(U_{i_1}),\dots,p^{-1}(U_{i_n})$ of $\overset{\sim}{X}$. Since $p$ is surjective, due to $p^{-1}(x)$ being nonempty for all $x\in X$, it follows that $U_{i_1},\dots, U_{i_n}$ is an open cover of $X$. Hence, $X$ is compact.
+
+\noindent\textbf{We now prove that $X$ is Hausdorff.}
+
+\noindent Let $x,y$ be two distinct points in $X$. Let $A$ and $B$ be open neighbourboods of $x$ and $y$ respectively such that $p^{-1}(A)=\bigsqcup_{i=1}^nS_i$ and $p^{-1}(B)=\bigsqcup_{i=1}^nT_i$, where each $S_i$ maps homeomorphically onto $A$ by $p$, and ditto for $T_i$ onto $B$. Let $\{x_1,\dots, x_n\}$ and $\{y_1,\dots, y_n\}$ be the preimages of $x$ and $y$ under $p$ respectively. Since $\overset{\sim}{X}$ is Hausdorff, there exist open sets $U_{i,j}\subseteq S_i$ and $V_{i,j}\subseteq T_j$ such that $x_i\in U_{i,j}$, $y_j\in V_{i,j}$, and $U_{i,j}\cap V_{i,j}=\emptyset$. Let $\mathcal{U}_i:=\bigcap_{j}U_{i,j}$ and let $\mathcal{V}_j:=\bigcap_{i}V_{i,j}$. These sets are open, since they are finite intersections of open sets. Hence, since $p$ is an open map, $\bigcap_ip(\mathcal{U}_i)$ and $\bigcap_jp(\mathcal{V}_j)$ are both open sets, where the former contains $x$, and the latter contains $y$. Suppose for a contradiction that their intersection is non-empty. Let $w$ be a point in the preimage of their intersection. Since $p$ maps each $S_i$ and $T_j$ homeomorphically onto $A$ and $B$ respectively, it follows that $w\in\mathcal{U}_i$ and $w\in\mathcal{V}_j$ for some $i,j$. But then $w\in U_{i,j}\cap V_{i,j}$; a contradiction. Hence, $X$ is Hausdorff.
+\end{proof}
 \end{document}
